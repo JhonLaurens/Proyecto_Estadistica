@@ -25,3 +25,21 @@ reports/figures/*
 # Otros
 .DS_Store
 *.log
+.vscode/
+*.swp
+*.swo
+.idea/
+*.egg-info/
+dist/
+build/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+.nox/
+.hypothesis/
+.coverage.*

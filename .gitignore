@@ -1,0 +1,18 @@
+# Archivo de configuración con API keys
+config.ini
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entornos virtuales
+venv/
+env/
+.env
+
+# Archivos de log
+*.log
+
+# Archivos temporales
+.DS_Store

@@ -128,3 +128,37 @@ Se redactará un resumen ejecutivo de los principales hallazgos respecto a:
 ---
 
 **EVALUACION:** Se adjunta Rúbrica de evaluación con los criterios para evaluar el informe final del trabajo de campo en términos de los objetivos anteriormente planteados. El informe debe incluir los resultados tabulados, gráficos generados (ej. en Excel, R, Python) y el análisis correspondiente, incorporando la riqueza de las nuevas variables disponibles.
+
+# Proyecto de Análisis de Encuestas de Satisfacción
+
+Este proyecto proporciona herramientas para analizar datos de encuestas de satisfacción de clientes.
+
+## Requisitos previos
+
+Antes de ejecutar el código, instale las dependencias necesarias:
+
+```bash
+pip install pandas matplotlib seaborn wordcloud Pillow
+```
+
+Para la integración opcional con OpenAI:
+```bash
+pip install openai
+```
+
+## Uso
+
+1. Ejecute el script `untitled5.py` desde VS Code o su editor preferido
+2. Se abrirá un diálogo para seleccionar el archivo CSV de la encuesta
+3. El programa analizará los datos y generará visualizaciones e informes
+
+## Configuración de la API de OpenAI (Opcional)
+
+Si desea utilizar la funcionalidad de IA para generar informes automáticos:
+
+1. Obtenga una API key de OpenAI
+2. Configure su clave API como variable de entorno:
+   - En Windows: `set OPENAI_API_KEY=su_clave_api_aqui`
+   - En Linux/Mac: `export OPENAI_API_KEY=su_clave_api_aqui`
+
+Alternativamente, puede añadir la clave directamente en el código (no recomendado para entornos compartidos).
