@@ -4,22 +4,27 @@ import pandas as pd
 import io
 import os
 
-def cargar_archivo_csv():
+def cargar_archivo_csv(ruta_archivo=None):
     """
-    Muestra un diálogo para seleccionar un archivo CSV y lo carga en un DataFrame.
-    Reemplaza la funcionalidad de files.upload() de Google Colab.
+    Carga un archivo CSV en un DataFrame.
+    
+    Args:
+        ruta_archivo: Ruta opcional al archivo CSV. Si no se proporciona,
+                     se muestra un diálogo para seleccionarlo.
     
     Returns:
         tuple: (DataFrame cargado, nombre de archivo)
     """
-    root = tk.Tk()
-    root.withdraw()  # Ocultar la ventana principal
-    
-    print("Seleccione un archivo CSV para cargar:")
-    ruta_archivo = filedialog.askopenfilename(
-        title="Seleccionar archivo CSV",
-        filetypes=[("Archivos CSV", "*.csv"), ("Todos los archivos", "*.*")]
-    )
+    # Si no se proporciona una ruta, mostrar diálogo para seleccionar archivo
+    if not ruta_archivo:
+        root = tk.Tk()
+        root.withdraw()  # Ocultar la ventana principal
+        
+        print("Seleccione un archivo CSV para cargar:")
+        ruta_archivo = filedialog.askopenfilename(
+            title="Seleccionar archivo CSV",
+            filetypes=[("Archivos CSV", "*.csv"), ("Todos los archivos", "*.*")]
+        )
     
     if not ruta_archivo:
         print("No se seleccionó ningún archivo.")
@@ -49,70 +54,62 @@ def cargar_archivo_csv():
 
 def cargar_api_key(servicio="OPENAI_API_KEY"):
     """
-    Obtiene la API key de forma segura, priorizando:
-    1. Variable de entorno
-    2. Archivo de configuración
-    3. Entrada manual (solo si es necesario)
-    
-    Args:
-        servicio: Nombre del servicio/variable de entorno
-    
-    Returns:
-        str: API key cargada
+    Obtiene la API key de forma segura.
     """
+    # Imprimir información de diagnóstico
+    print(f"Buscando {servicio}...")
+    
     # Primero intentar obtener de variable de entorno
     api_key = os.environ.get(servicio)
+    if api_key:
+        print(f"- API key encontrada en variables de entorno")
+        return api_key
     
     # Si no está en variable de entorno, buscar en archivo de configuración
-    if not api_key:
-        config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config.ini')
-        if os.path.exists(config_path):
-            import configparser
+    config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config.ini')
+    print(f"- Buscando en archivo: {config_path}")
+    
+    if os.path.exists(config_path):
+        try:
             config = configparser.ConfigParser()
             config.read(config_path)
-            try:
-                api_key = config['API_KEYS'][servicio]
-            except (KeyError, configparser.NoSectionError):
-                pass
-    
-    # Como último recurso, solicitar al usuario (solo para desarrollo)
-    if not api_key:
-        print(f"\nATENCIÓN: No se encontró la API key para {servicio}.")
-        print("Por seguridad, ingrese la API key (no será guardada en el código):")
-        api_key = input("> ").strip()
-        
-        # Preguntar si desea guardar la key en un archivo de configuración
-        guardar = input("¿Desea guardar esta API key en un archivo de configuración local? (s/n): ").lower()
-        if guardar == 's':
-            import configparser
-            config = configparser.ConfigParser()
-            
-            # Si el archivo existe, leerlo primero
-            if os.path.exists(config_path):
-                config.read(config_path)
-            
-            # Asegurarse de que la sección existe
-            if 'API_KEYS' not in config:
-                config['API_KEYS'] = {}
-            
-            # Guardar la API key
-            config['API_KEYS'][servicio] = api_key
-            
-            with open(config_path, 'w') as f:
-                config.write(f)
-            print(f"API key guardada en {config_path}")
-            print("IMPORTANTE: Añada config.ini a su archivo .gitignore para evitar compartir sus claves.")
-            
-            # Crear .gitignore si no existe
-            gitignore_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '.gitignore')
-            if not os.path.exists(gitignore_path):
-                with open(gitignore_path, 'w') as f:
-                    f.write("config.ini\n")
+            if 'API_KEYS' in config and servicio in config['API_KEYS']:
+                print(f"- API key encontrada en archivo config.ini")
+                return config['API_KEYS'][servicio]
             else:
-                with open(gitignore_path, 'r') as f:
-                    content = f.read()
-                if 'config.ini' not in content:
-                    with open(gitignore_path, 'a') as f:
-                        f.write("\nconfig.ini\n")
+                print(f"- Sección 'API_KEYS' o clave '{servicio}' no encontrada en config.ini")
+        except Exception as e:
+            print(f"- Error al leer config.ini: {e}")
+    else:
+        print(f"- Archivo config.ini no encontrado")
+    
+    # Como último recurso, solicitar al usuario
+    print(f"\nATENCIÓN: No se encontró la API key para {servicio}.")
+    print("Por seguridad, ingrese la API key (no será guardada en el código):")
+    api_key = input("> ").strip()
+    
+    if api_key:
+        # Preguntar si desea guardar la key en un archivo de configuración
+        guardar = input("¿Desea guardar esta API key en config.ini para futuros usos? (s/n): ").lower()
+        if guardar == 's':
+            try:
+                config = configparser.ConfigParser()
+                
+                # Si el archivo existe, leerlo primero
+                if os.path.exists(config_path):
+                    config.read(config_path)
+                
+                # Asegurarse de que la sección existe
+                if 'API_KEYS' not in config:
+                    config['API_KEYS'] = {}
+                
+                # Guardar la API key
+                config['API_KEYS'][servicio] = api_key
+                
+                with open(config_path, 'w') as f:
+                    config.write(f)
+                print(f"API key guardada en {config_path}")
+            except Exception as e:
+                print(f"Error al guardar la API key: {e}")
     
     return api_key

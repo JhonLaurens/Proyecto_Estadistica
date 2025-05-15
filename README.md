@@ -162,3 +162,60 @@ Si desea utilizar la funcionalidad de IA para generar informes automáticos:
    - En Linux/Mac: `export OPENAI_API_KEY=su_clave_api_aqui`
 
 Alternativamente, puede añadir la clave directamente en el código (no recomendado para entornos compartidos).
+
+# Proyecto Estadística - Análisis de Encuestas de Satisfacción
+
+## Estructura recomendada
+
+```
+Proyecto_Estadistica/
+│
+├── main.py
+├── src/
+│   ├── __init__.py
+│   ├── data_processor.py
+│   ├── visualizer.py
+│   ├── ai_analyzer.py
+│   └── data_loader.py
+├── utils/
+│   ├── __init__.py
+│   └── config_utils.py
+├── file_loader.py
+├── config.ini
+├── config_ejemplo.ini
+├── Base encuesta de satisfacción.csv
+├── Base encuesta de satisfacción.xlsx
+├── README.md
+```
+
+## Ejecución multiplataforma
+
+1. **Asegúrate de tener Python 3.8+ instalado.**
+2. **Instala las dependencias necesarias** (puedes usar un entorno virtual):
+
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # Linux/Mac
+   .venv\Scripts\activate     # Windows
+   pip install -r requirements.txt
+   ```
+
+3. **Ejecuta el programa principal:**
+
+   ```bash
+   python main.py
+   ```
+
+4. **Si ves errores de importación** como `No module named 'data_processor'`:
+   - Verifica que existan las carpetas `src` y `utils` y que tengan un archivo `__init__.py`.
+   - Si agregas nuevos módulos, asegúrate de crearlos dentro de `src/` y de actualizar las importaciones si es necesario.
+   - El script `main.py` agrega automáticamente las rutas necesarias al `sys.path`.
+
+5. **Para convertir el proyecto en ejecutable como paquete**:
+   - Puedes crear un archivo `__main__.py` en la raíz o en `src/` y ejecutar con `python -m src` si lo deseas.
+
+## Notas
+
+- El sistema es compatible con Windows, Mac y Linux.
+- Si usas Jupyter, puedes importar los módulos de la misma forma.
+- Si tienes problemas, revisa los permisos de archivos y la codificación.
