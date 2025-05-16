@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Satisfacción del Cliente - Coltefinanciera</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/coltefinanciera.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <header class="bg-blue-700 text-white p-6 shadow-lg">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-3xl font-bold">Análisis de Satisfacción del Cliente - Coltefinanciera</h1>
+            <div id="logo_placeholder" class="mt-4 md:mt-0">
+                <span class="text-sm italic">(Logo Coltefinanciera)</span>
+            </div>
+        </div>
+    </header>
+    <nav id="navbar" class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <ul class="flex flex-wrap justify-center space-x-4 md:space-x-6">
+                <li><a href="#introduccion" class="text-blue-700 hover:text-blue-900 font-medium">Introducción</a></li>
+                <li><a href="#ficha_tecnica" class="text-blue-700 hover:text-blue-900 font-medium">Ficha Técnica</a></li>
+                <li><a href="#analisis_descriptivo" class="text-blue-700 hover:text-blue-900 font-medium">Análisis Descriptivo</a></li>
+                <li><a href="#pruebas_hipotesis" class="text-blue-700 hover:text-blue-900 font-medium">Pruebas de Hipótesis</a></li>
+                <li><a href="#hallazgos" class="text-blue-700 hover:text-blue-900 font-medium">Hallazgos</a></li>
+                <li><a href="#conclusiones" class="text-blue-700 hover:text-blue-900 font-medium">Conclusiones</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container mx-auto p-6">
+        <!-- Sección 1: Introducción -->
+        <section id="introduccion" class="mb-12 scroll-mt-20">
+            <h2 class="text-2xl font-bold text-blue-700 mb-6 mt-10">Introducción</h2>
+            <p id="intro_purpose_text" class="mb-4 text-lg leading-relaxed">[Aquí va el propósito del análisis de satisfacción del cliente de Coltefinanciera.]</p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Objetivos del Análisis</h3>
+            <ul id="analysis_objectives_list" class="list-disc list-inside space-y-2 text-lg">
+                <li>[Objetivo 1]</li>
+                <li>[Objetivo 2]</li>
+                <li>[Objetivo 3]</li>
+            </ul>
+        </section>
+        <!-- Sección 2: Ficha Técnica y Descripción de Variables -->
+        <section id="ficha_tecnica" class="mb-12 scroll-mt-20">
+            <h2 class="text-2xl font-bold text-blue-700 mb-6 mt-10">Ficha Técnica y Descripción de Variables</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Ficha Técnica</h3>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <p><strong>Periodo del estudio:</strong> <span id="study_period_placeholder">[Placeholder: Fecha Inicio - Fecha Fin]</span></p>
+                        <p><strong>Cantidad total de encuestas:</strong> <span id="total_data_placeholder">[Placeholder: Número de registros]</span></p>
+                        <p><strong>Fuente de datos:</strong> Encuesta de satisfacción del cliente de Coltefinanciera.</p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Descripción de Variables</h3>
+                    <div class="bg-white p-6 rounded-lg shadow overflow-x-auto">
+                        <table class="min-w-full" id="variables_table">
+                            <thead>
+                                <tr>
+                                    <th>Variable</th>
+                                    <th>Descripción</th>
+                                    <th>Tipo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>SEGMENTO</td><td>Segmento del cliente</td><td>Categórica</td></tr>
+                                <tr><td>CIUDAD_AGENCIA</td><td>Ciudad de la agencia</td><td>Categórica</td></tr>
+                                <tr><td>AGENCIA_EJECUTIVO</td><td>Tipo de ejecutivo</td><td>Categórica</td></tr>
+                                <tr><td>GENERO</td><td>Género del cliente</td><td>Categórica</td></tr>
+                                <tr><td>ESTRATO</td><td>Estrato socioeconómico</td><td>Categórica</td></tr>
+                                <tr><td>FECHA_NACIMIENTO_FUNDACION</td><td>Fecha de nacimiento/fundación</td><td>Fecha</td></tr>
+                                <tr><td>PREGUNTA_1</td><td>Calificación satisfacción 1</td><td>Numérica/Ordinal</td></tr>
+                                <tr><td>PREGUNTA_2</td><td>Calificación satisfacción 2</td><td>Numérica/Ordinal</td></tr>
+                                <tr><td>PREGUNTA_3</td><td>Calificación satisfacción 3</td><td>Numérica/Ordinal</td></tr>
+                                <tr><td>PREGUNTA_4</td><td>Calificación satisfacción 4</td><td>Numérica/Ordinal</td></tr>
+                                <tr><td>PREGUNTA_5</td><td>Comentario libre</td><td>Texto</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sección 3: Análisis Descriptivo -->
+        <section id="analisis_descriptivo" class="mb-12 scroll-mt-20">
+            <h2 class="text-2xl font-bold text-blue-700 mb-6 mt-10">Análisis Descriptivo</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Análisis Univariado</h3>
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h4 class="text-lg font-medium text-gray-700 mb-2">Distribución por Segmento</h4>
+                    <img id="chart_segmento" src="graficos/univariado_SEGMENTO.png" alt="Gráfico Segmento" class="mx-auto my-4 rounded shadow">
+                </div>
+                <div>
+                    <h4 class="text-lg font-medium text-gray-700 mb-2">Distribución por Ciudad de Agencia</h4>
+                    <img id="chart_ciudad_agencia" src="graficos/univariado_CIUDAD_AGENCIA.png" alt="Gráfico Ciudad Agencia" class="mx-auto my-4 rounded shadow">
+                </div>
+                <div>
+                    <h4 class="text-lg font-medium text-gray-700 mb-2">Distribución por Tipo de Ejecutivo</h4>
+                    <img id="chart_tipo_ejecutivo" src="graficos/univariado_TIPO_EJECUTIVO.png" alt="Gráfico Tipo Ejecutivo" class="mx-auto my-4 rounded shadow">
+                </div>
+                <div>
+                    <h4 class="text-lg font-medium text-gray-700 mb-2">Distribución por Género</h4>
+                    <img id="chart_genero" src="graficos/univariado_GENERO.png" alt="Gráfico Género" class="mx-auto my-4 rounded shadow">
+                </div>
+                <div>
+                    <h4 class="text-lg font-medium text-gray-700 mb-2">Distribución por Estrato</h4>
+                    <img id="chart_estrato" src="graficos/univariado_ESTRATO.png" alt="Gráfico Estrato" class="mx-auto my-4 rounded shadow">
+                </div>
+            </div>
+            <h4 class="text-lg font-medium text-gray-700 mb-2 mt-8">Análisis de Calificaciones y Edad</h4>
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h5 class="font-medium text-gray-600 mb-1">Calificaciones PREGUNTA_1</h5>
+                    <img id="chart_pregunta_1" src="graficos/univariado_PREGUNTA_1.png" alt="Histograma PREGUNTA_1" class="mx-auto my-4 rounded shadow">
+                </div>
+                <div>
+                    <h5 class="font-medium text-gray-600 mb-1">Calificaciones PREGUNTA_2</h5>
+                    <img id="chart_pregunta_2" src="graficos/univariado_PREGUNTA_2.png" alt="Histograma PREGUNTA_2" class="mx-auto my-4 rounded shadow">
+                </div>
+                <div>
+                    <h5 class="font-medium text-gray-600 mb-1">Calificaciones PREGUNTA_3</h5>
+                    <img id="chart_pregunta_3" src="graficos/univariado_PREGUNTA_3.png" alt="Histograma PREGUNTA_3" class="mx-auto my-4 rounded shadow">
+                </div>
+                <div>
+                    <h5 class="font-medium text-gray-600 mb-1">Calificaciones PREGUNTA_4</h5>
+                    <img id="chart_pregunta_4" src="graficos/univariado_PREGUNTA_4.png" alt="Histograma PREGUNTA_4" class="mx-auto my-4 rounded shadow">
+                </div>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Análisis Bivariado (Categórica y Numérica)</h3>
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h4 class="text-lg font-medium text-gray-700 mb-2">Satisfacción Promedio por Ciudad</h4>
+                    <img id="chart_satisfaccion_ciudad" src="[Placeholder: ruta a gráfico PNG]" alt="Gráfico Satisfacción por Ciudad" class="mx-auto my-4 rounded shadow">
+                    <div id="table_satisfaccion_ciudad" class="overflow-x-auto"></div>
+                </div>
+                <!-- Repetir para otras combinaciones relevantes -->
+            </div>
+            <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Análisis Bivariado (Categórica y Categórica)</h3>
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h4 class="text-lg font-medium text-gray-700 mb-2">Relación Género y Ciudad</h4>
+                    <img id="chart_genero_ciudad" src="[Placeholder: ruta a gráfico PNG]" alt="Gráfico Género por Ciudad" class="mx-auto my-4 rounded shadow">
+                    <div id="table_genero_ciudad" class="overflow-x-auto"></div>
+                </div>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Análisis de Comentarios (PREGUNTA_5)</h3>
+            <div class="bg-white p-6 rounded-lg shadow mb-6">
+                <h4 class="text-lg font-medium text-gray-700 mb-2">Temas Clave Identificados</h4>
+                <p id="text_temas_clave_comentarios" class="text-gray-600">La mayoría de los comentarios son positivos, destacando la calidad del servicio y la atención. Palabras como "buena", "servicio", "atención" y "excelente" son predominantes.</p>
+                <img id="wordcloud_comentarios" src="graficos/wordcloud_pregunta5.png" alt="WordCloud Comentarios" class="mx-auto my-4 rounded shadow">
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h4 class="text-lg font-medium text-gray-700 mb-2">Ejemplos Representativos de Comentarios</h4>
+                <blockquote class="border-l-4 border-blue-500 pl-4 italic text-gray-600 my-2">
+                    <p id="ejemplo_comentario_1">"Excelente atención y servicio, muchas gracias."</p>
+                </blockquote>
+                <blockquote class="border-l-4 border-red-500 pl-4 italic text-gray-600 my-2">
+                    <p id="ejemplo_comentario_2">"Me gustaría que los tiempos de espera fueran menores."</p>
+                </blockquote>
+            </div>
+        </section>
+        <!-- Sección 4: Pruebas de Hipótesis y Nivel de Confianza -->
+        <section id="pruebas_hipotesis" class="mb-12 scroll-mt-20">
+            <h2 class="text-2xl font-bold text-blue-700 mb-6 mt-10">Pruebas de Hipótesis y Nivel de Confianza</h2>
+            <p id="hipotesis_purpose_text" class="mb-4 text-lg">[Placeholder: Explicación del propósito de las pruebas de hipótesis para Coltefinanciera.]</p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Pruebas de Normalidad</h3>
+            <div class="bg-white p-6 rounded-lg shadow mb-6">
+                <p id="text_pruebas_normalidad">[Placeholder: Resultados de pruebas de normalidad]</p>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Resultados de Pruebas de Hipótesis</h3>
+            <div class="bg-white p-6 rounded-lg shadow mb-6">
+                <p><strong>Hipótesis Nula (H0):</strong> [Placeholder]</p>
+                <p><strong>Hipótesis Alternativa (H1):</strong> [Placeholder]</p>
+                <p><strong>Prueba utilizada:</strong> [Placeholder]</p>
+                <p><strong>Estadístico de prueba:</strong> [Placeholder]</p>
+                <p><strong>P-valor:</strong> [Placeholder]</p>
+                <p><strong>Decisión:</strong> [Placeholder]</p>
+                <p class="mt-2"><strong>Interpretación:</strong> [Placeholder]</p>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Intervalos de Confianza</h3>
+            <div class="bg-white p-6 rounded-lg shadow">
+                <p id="ic_media_global">[Placeholder: Intervalo de confianza para la media de satisfacción]</p>
+                <p id="ic_diferencia_medias_grupos">[Placeholder: Intervalo de confianza para la diferencia de medias]</p>
+            </div>
+        </section>
+        <!-- Sección 5: Hallazgos -->
+        <section id="hallazgos" class="mb-12 scroll-mt-20">
+            <h2 class="text-2xl font-bold text-blue-700 mb-6 mt-10">Hallazgos</h2>
+            <ul id="list_hallazgos" class="list-disc list-inside space-y-3 text-gray-700">
+                <li>[Placeholder: Hallazgo clave 1]</li>
+                <li>[Placeholder: Hallazgo clave 2]</li>
+                <li>[Placeholder: Hallazgo clave 3]</li>
+            </ul>
+        </section>
+        <!-- Sección 6: Conclusiones y Recomendaciones -->
+        <section id="conclusiones" class="mb-12 scroll-mt-20">
+            <h2 class="text-2xl font-bold text-blue-700 mb-6 mt-10">Conclusiones y Recomendaciones</h2>
+            <div class="bg-white p-6 rounded-lg shadow mb-6">
+                <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Conclusiones</h3>
+                <p id="text_conclusiones_principales" class="text-gray-700 leading-relaxed">[Placeholder: Resumen de las principales conclusiones.]</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Recomendaciones Estratégicas</h3>
+                <ul id="list_recomendaciones" class="list-disc list-inside space-y-3 text-gray-700">
+                    <li>[Placeholder: Recomendación 1]</li>
+                    <li>[Placeholder: Recomendación 2]</li>
+                    <li>[Placeholder: Recomendación 3]</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-gray-800 text-gray-300 text-center p-6 mt-12">
+        <p>&copy; <span id="current_year"></span> Coltefinanciera. Todos los derechos reservados.</p>
+        <p>Análisis realizado con datos de Encuesta de Satisfacción del Cliente - Coltefinanciera.</p>
+        <p>Fecha de generación del reporte: <span id="report_generation_date">[Placeholder: Fecha actual]</span></p>
+    </footer>
+    <script src="static/coltefinanciera.js"></script>
+    <script>
+        document.getElementById('current_year').textContent = new Date().getFullYear();
+        document.getElementById('report_generation_date').textContent = new Date().toLocaleDateString('es-CO');
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const offset = document.getElementById('navbar').offsetHeight || 60;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - offset;
+                    window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

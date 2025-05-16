@@ -1,1 +1,1 @@
-# Inicializa el paquete src
+# src/__init__.py
