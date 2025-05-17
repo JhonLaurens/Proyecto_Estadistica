@@ -16,3 +16,30 @@ img.rounded.shadow {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     border-radius: 0.5rem;
 }
+.accordion-header {
+  cursor: pointer;
+  padding: 1rem;
+  background: #e5e7eb;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.accordion-header.active, .accordion-header:hover {
+  background: #c7d2fe;
+}
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: #f9fafb;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+.accordion-header.active + .accordion-content {
+  padding: 1rem;
+}
+#summary_comentarios_temas.collapsed {
+  transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1);
+}

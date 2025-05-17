@@ -5,7 +5,7 @@ import seaborn as sns
 from src.exporter import export_table_to_excel, add_figure_for_pdf, save_plot_to_png
 import os
 
-def bivariado_cat_cat(df, var1, var2, top_n=5, export_excel_path=None, export_pdf_path=None, export_png_dir=None):
+def bivariado_cat_cat(df, var1, var2, top_n=5, export_excel_path=None, export_pdf_path=None, export_png_dir=None, export_json_dir=None):
     top_vals = df[var1].value_counts().nlargest(top_n).index
     df_top = df[df[var1].isin(top_vals)]
     cross_tab = pd.crosstab(df_top[var1], df_top[var2], normalize='index') * 100
@@ -32,10 +32,17 @@ def bivariado_cat_cat(df, var1, var2, top_n=5, export_excel_path=None, export_pd
     if export_png_dir:
         os.makedirs(export_png_dir, exist_ok=True)
         save_plot_to_png(fig, os.path.join(export_png_dir, f"bivariado_{var1}_vs_{var2}.png"))
-    plt.show()
+    if export_json_dir:
+        os.makedirs(export_json_dir, exist_ok=True)
+        cross_tab.round(2).to_json(
+            os.path.join(export_json_dir, f"tabla_{var1}_vs_{var2}.json"),
+            force_ascii=False, indent=2
+        )
+    # plt.show()  # Eliminado para evitar abrir ventana al correr main.py
+    plt.close(fig)
 
 
-def bivariado_cat_num(df, var_cat, var_num, top_n=5, export_excel_path=None, export_pdf_path=None, export_png_dir=None):
+def bivariado_cat_num(df, var_cat, var_num, top_n=5, export_excel_path=None, export_pdf_path=None, export_png_dir=None, export_json_dir=None):
     top_vals = df[var_cat].value_counts().nlargest(top_n).index
     df_top = df[df[var_cat].isin(top_vals)]
     print(f"\n{'='*60}")
@@ -67,6 +74,13 @@ def bivariado_cat_num(df, var_cat, var_num, top_n=5, export_excel_path=None, exp
     print(summary.round(2).to_string())
     if export_excel_path:
         export_table_to_excel(summary, f'{var_cat}_vs_{var_num}', export_excel_path)
+    if export_json_dir:
+        os.makedirs(export_json_dir, exist_ok=True)
+        summary.round(2).to_json(
+            os.path.join(export_json_dir, f"tabla_{var_cat}_vs_{var_num}.json"),
+            force_ascii=False, indent=2
+        )
     print(f"\nCategoría con mayor promedio: {summary['Promedio'].idxmax()} ({summary['Promedio'].max():.2f})")
     print(f"Categoría con menor promedio: {summary['Promedio'].idxmin()} ({summary['Promedio'].min():.2f})")
-    plt.show()
+    # plt.show()  # Eliminado para evitar abrir ventana al correr main.py
+    plt.close(fig)

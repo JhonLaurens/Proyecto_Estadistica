@@ -5,7 +5,7 @@ import seaborn as sns
 from src.exporter import export_table_to_excel, add_figure_for_pdf, save_plot_to_png
 import os
 
-def analisis_univariado(df, var_categorica, export_excel_path=None, export_pdf_path=None, export_png_dir=None):
+def analisis_univariado(df, var_categorica, export_excel_path=None, export_pdf_path=None, export_png_dir=None, export_json_dir=None):
     abs_freq = df[var_categorica].value_counts()
     rel_freq = df[var_categorica].value_counts(normalize=True) * 100
     tabla = pd.DataFrame({'Frec. Absoluta': abs_freq, 'Frec. Relativa (%)': rel_freq.round(2)})
@@ -35,4 +35,10 @@ def analisis_univariado(df, var_categorica, export_excel_path=None, export_pdf_p
     if export_png_dir:
         os.makedirs(export_png_dir, exist_ok=True)
         save_plot_to_png(fig, os.path.join(export_png_dir, f"univariado_{var_categorica}.png"))
-    plt.show()
+    if export_json_dir:
+        os.makedirs(export_json_dir, exist_ok=True)
+        tabla.reset_index().rename(columns={'index': var_categorica}).to_json(
+            os.path.join(export_json_dir, f"tabla_{var_categorica}.json"),
+            orient='records', force_ascii=False, indent=2
+        )
+    plt.close(fig)

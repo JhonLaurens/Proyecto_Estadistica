@@ -1,0 +1,77 @@
+[
+  {
+    "AGENCIA_EJECUTIVO":"Bogota El Nogal",
+    "Frec. Absoluta":158,
+    "Frec. Relativa (%)":14.86
+  },
+  {
+    "AGENCIA_EJECUTIVO":"Coltejer Principal",
+    "Frec. Absoluta":127,
+    "Frec. Relativa (%)":11.95
+  },
+  {
+    "AGENCIA_EJECUTIVO":"Unicentro",
+    "Frec. Absoluta":119,
+    "Frec. Relativa (%)":11.19
+  },
+  {
+    "AGENCIA_EJECUTIVO":"Bogota Plaza Imperial",
+    "Frec. Absoluta":86,
+    "Frec. Relativa (%)":8.09
+  },
+  {
+    "AGENCIA_EJECUTIVO":"Manizales",
+    "Frec. Absoluta":84,
+    "Frec. Relativa (%)":7.9
+  },
+  {
+    "AGENCIA_EJECUTIVO":"Bogota Principal",
+    "Frec. Absoluta":73,
+    "Frec. Relativa (%)":6.87
+  },
+  {
+    "AGENCIA_EJECUTIVO":"Bogota Centro Mayor",
+    "Frec. Absoluta":73,
+    "Frec. Relativa (%)":6.87
+  },
+  {
+    "AGENCIA_EJECUTIVO":"Bogota Gran Estacion",
+    "Frec. Absoluta":58,
+    "Frec. Relativa (%)":5.46
+  },
+  {
+    "AGENCIA_EJECUTIVO":"San Diego",
+    "Frec. Absoluta":58,
+    "Frec. Relativa (%)":5.46
+  },
+  {
+    "AGENCIA_EJECUTIVO":"Bucaramanga",
+    "Frec. Absoluta":57,
+    "Frec. Relativa (%)":5.36
+  },
+  {
+    "AGENCIA_EJECUTIVO":"Bogota Santa Fe",
+    "Frec. Absoluta":57,
+    "Frec. Relativa (%)":5.36
+  },
+  {
+    "AGENCIA_EJECUTIVO":"Bogota Centro Internacional",
+    "Frec. Absoluta":46,
+    "Frec. Relativa (%)":4.33
+  },
+  {
+    "AGENCIA_EJECUTIVO":"Cali Norte",
+    "Frec. Absoluta":28,
+    "Frec. Relativa (%)":2.63
+  },
+  {
+    "AGENCIA_EJECUTIVO":"Barranquilla",
+    "Frec. Absoluta":22,
+    "Frec. Relativa (%)":2.07
+  },
+  {
+    "AGENCIA_EJECUTIVO":"Pereira",
+    "Frec. Absoluta":17,
+    "Frec. Relativa (%)":1.6
+  }
+]

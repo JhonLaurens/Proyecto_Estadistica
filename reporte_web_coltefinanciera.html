@@ -7,9 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/coltefinanciera.css">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-    </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
     <header class="bg-blue-700 text-white p-6 shadow-lg">
@@ -35,13 +32,18 @@
     <main class="container mx-auto p-6">
         <!-- Sección 1: Introducción -->
         <section id="introduccion" class="mb-12 scroll-mt-20">
-            <h2 class="text-2xl font-bold text-blue-700 mb-6 mt-10">Introducción</h2>
-            <p id="intro_purpose_text" class="mb-4 text-lg leading-relaxed">[Aquí va el propósito del análisis de satisfacción del cliente de Coltefinanciera.]</p>
+            <h2 class="text-2xl font-bold text-blue-700 mb-6 mt-10">Introducción / Resumen</h2>
+            <p id="intro_purpose_text" class="mb-4 text-lg leading-relaxed">
+                Este informe presenta un análisis exhaustivo de los datos recopilados a través de las encuestas de satisfacción del cliente de Coltefinanciera. El propósito principal es comprender en profundidad la percepción de los clientes sobre los servicios ofrecidos, identificar áreas clave de mejora y reconocer las fortalezas de la entidad. A través de un análisis estadístico descriptivo e inferencial, buscamos proporcionar información valiosa que respalde la toma de decisiones estratégicas orientadas a optimizar la experiencia del cliente y fomentar su lealtad.
+            </p>
             <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Objetivos del Análisis</h3>
             <ul id="analysis_objectives_list" class="list-disc list-inside space-y-2 text-lg">
-                <li>[Objetivo 1]</li>
-                <li>[Objetivo 2]</li>
-                <li>[Objetivo 3]</li>
+                <li>Establecer el perfil demográfico y de segmento de los clientes encuestados de Coltefinanciera.</li>
+                <li>Evaluar el nivel general de satisfacción de los clientes con los productos y servicios de Coltefinanciera.</li>
+                <li>Identificar diferencias significativas en la satisfacción del cliente según la ciudad de la agencia, el tipo de agencia/ejecutivo y otras variables demográficas relevantes.</li>
+                <li>Analizar las calificaciones específicas otorgadas a diferentes aspectos del servicio (PREGUNTA_1 a PREGUNTA_4).</li>
+                <li>Extraer y categorizar los temas principales mencionados en los comentarios abiertos (PREGUNTA_5) para identificar preocupaciones y sugerencias recurrentes.</li>
+                <li>Validar estadísticamente las observaciones para proporcionar conclusiones robustas.</li>
             </ul>
         </section>
         <!-- Sección 2: Ficha Técnica y Descripción de Variables -->
@@ -68,17 +70,26 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr><td>SEGMENTO</td><td>Segmento del cliente</td><td>Categórica</td></tr>
-                                <tr><td>CIUDAD_AGENCIA</td><td>Ciudad de la agencia</td><td>Categórica</td></tr>
-                                <tr><td>AGENCIA_EJECUTIVO</td><td>Tipo de ejecutivo</td><td>Categórica</td></tr>
+                                <tr><td>ID</td><td>Identificador único de la encuesta</td><td>Numérica</td></tr>
+                                <tr><td>FECHA_ENCUESTA</td><td>Fecha en que se realizó la encuesta</td><td>Fecha</td></tr>
+                                <tr><td>EMAIL</td><td>Correo electrónico del encuestado</td><td>Texto</td></tr>
+                                <tr><td>NOMBRE</td><td>Nombre del encuestado o empresa</td><td>Texto</td></tr>
+                                <tr><td>CEDULA</td><td>Documento de identidad o NIT</td><td>Numérica</td></tr>
+                                <tr><td>FECHA_VINCULACION</td><td>Fecha de vinculación del cliente con Coltefinanciera</td><td>Fecha</td></tr>
+                                <tr><td>SEGMENTO</td><td>Segmento del cliente (Personas/Empresas)</td><td>Categórica</td></tr>
+                                <tr><td>CIUDAD_AGENCIA</td><td>Ciudad de la agencia donde se atendió al cliente</td><td>Categórica</td></tr>
+                                <tr><td>AGENCIA_EJECUTIVO</td><td>Nombre de la agencia o ejecutivo</td><td>Categórica</td></tr>
+                                <tr><td>TIPO_EJECUTIVO</td><td>Tipo de ejecutivo que atendió al cliente</td><td>Categórica</td></tr>
+                                <tr><td>EJECUTIVO</td><td>Nombre del ejecutivo que atendió al cliente</td><td>Texto</td></tr>
+                                <tr><td>CIUDAD_RESIDENCIA</td><td>Ciudad de residencia del cliente</td><td>Categórica</td></tr>
                                 <tr><td>GENERO</td><td>Género del cliente</td><td>Categórica</td></tr>
-                                <tr><td>ESTRATO</td><td>Estrato socioeconómico</td><td>Categórica</td></tr>
-                                <tr><td>FECHA_NACIMIENTO_FUNDACION</td><td>Fecha de nacimiento/fundación</td><td>Fecha</td></tr>
-                                <tr><td>PREGUNTA_1</td><td>Calificación satisfacción 1</td><td>Numérica/Ordinal</td></tr>
-                                <tr><td>PREGUNTA_2</td><td>Calificación satisfacción 2</td><td>Numérica/Ordinal</td></tr>
-                                <tr><td>PREGUNTA_3</td><td>Calificación satisfacción 3</td><td>Numérica/Ordinal</td></tr>
-                                <tr><td>PREGUNTA_4</td><td>Calificación satisfacción 4</td><td>Numérica/Ordinal</td></tr>
-                                <tr><td>PREGUNTA_5</td><td>Comentario libre</td><td>Texto</td></tr>
+                                <tr><td>FECHA_NACIMIENTO_FUNDACION</td><td>Fecha de nacimiento (persona) o fundación (empresa)</td><td>Fecha</td></tr>
+                                <tr><td>ESTRATO</td><td>Estrato socioeconómico del cliente</td><td>Categórica</td></tr>
+                                <tr><td>PREGUNTA_1</td><td>Calificación de satisfacción 1</td><td>Numérica/Ordinal</td></tr>
+                                <tr><td>PREGUNTA_2</td><td>Calificación de satisfacción 2</td><td>Numérica/Ordinal</td></tr>
+                                <tr><td>PREGUNTA_3</td><td>Calificación de satisfacción 3</td><td>Numérica/Ordinal</td></tr>
+                                <tr><td>PREGUNTA_4</td><td>Calificación de satisfacción 4</td><td>Numérica/Ordinal</td></tr>
+                                <tr><td>PREGUNTA_5</td><td>Comentario libre del cliente</td><td>Texto</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -88,104 +99,143 @@
         <!-- Sección 3: Análisis Descriptivo -->
         <section id="analisis_descriptivo" class="mb-12 scroll-mt-20">
             <h2 class="text-2xl font-bold text-blue-700 mb-6 mt-10">Análisis Descriptivo</h2>
+            <p class="mb-6 text-lg">Análisis detallado de las características de los clientes de Coltefinanciera y sus respuestas a la encuesta.</p>
             <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Análisis Univariado</h3>
+            <p class="mb-4">Distribución de frecuencias y estadísticas descriptivas para cada variable relevante.</p>
             <div class="grid md:grid-cols-2 gap-8 mb-8">
                 <div>
                     <h4 class="text-lg font-medium text-gray-700 mb-2">Distribución por Segmento</h4>
-                    <img id="chart_segmento" src="graficos/univariado_SEGMENTO.png" alt="Gráfico Segmento" class="mx-auto my-4 rounded shadow">
+                    <div id="chart_segmento_distribucion" class="content-placeholder">Placeholder para Gráfico de Barras/Pastel: Distribución de SEGMENTO</div>
+                    <div id="table_segmento_frecuencia" class="mt-4 content-placeholder">Placeholder para Tabla de Frecuencia: SEGMENTO</div>
                 </div>
                 <div>
                     <h4 class="text-lg font-medium text-gray-700 mb-2">Distribución por Ciudad de Agencia</h4>
-                    <img id="chart_ciudad_agencia" src="graficos/univariado_CIUDAD_AGENCIA.png" alt="Gráfico Ciudad Agencia" class="mx-auto my-4 rounded shadow">
+                    <div id="chart_ciudad_distribucion" class="content-placeholder">Placeholder para Gráfico: Distribución de CIUDAD_AGENCIA</div>
+                    <div id="table_ciudad_frecuencia" class="mt-4 content-placeholder">Placeholder para Tabla de Frecuencia: CIUDAD_AGENCIA</div>
                 </div>
                 <div>
-                    <h4 class="text-lg font-medium text-gray-700 mb-2">Distribución por Tipo de Ejecutivo</h4>
-                    <img id="chart_tipo_ejecutivo" src="graficos/univariado_TIPO_EJECUTIVO.png" alt="Gráfico Tipo Ejecutivo" class="mx-auto my-4 rounded shadow">
+                    <h4 class="text-lg font-medium text-gray-700 mb-2">Distribución por Agencia/Ejecutivo</h4>
+                    <div id="chart_agencia_ejecutivo_distribucion" class="content-placeholder">Placeholder para Gráfico: Distribución de AGENCIA_EJECUTIVO</div>
+                    <div id="table_agencia_ejecutivo_frecuencia" class="mt-4 content-placeholder">Placeholder para Tabla de Frecuencia: AGENCIA_EJECUTIVO</div>
                 </div>
                 <div>
                     <h4 class="text-lg font-medium text-gray-700 mb-2">Distribución por Género</h4>
-                    <img id="chart_genero" src="graficos/univariado_GENERO.png" alt="Gráfico Género" class="mx-auto my-4 rounded shadow">
-                </div>
-                <div>
-                    <h4 class="text-lg font-medium text-gray-700 mb-2">Distribución por Estrato</h4>
-                    <img id="chart_estrato" src="graficos/univariado_ESTRATO.png" alt="Gráfico Estrato" class="mx-auto my-4 rounded shadow">
+                    <div id="chart_genero_distribucion" class="content-placeholder">Placeholder para Gráfico: Distribución de GENERO</div>
+                    <div id="table_genero_frecuencia" class="mt-4 content-placeholder">Placeholder para Tabla de Frecuencia: GENERO</div>
                 </div>
             </div>
             <h4 class="text-lg font-medium text-gray-700 mb-2 mt-8">Análisis de Calificaciones y Edad</h4>
             <div class="grid md:grid-cols-2 gap-8 mb-8">
                 <div>
+                    <h5 class="font-medium text-gray-600 mb-1">Edad de los Clientes</h5>
+                    <div id="chart_edad_distribucion" class="content-placeholder">Placeholder para Histograma/Box Plot: Edad</div>
+                    <div id="table_edad_stats" class="mt-4 content-placeholder">Placeholder para Tabla de Estadísticas: Edad (media, mediana, std, etc.)</div>
+                </div>
+                <div>
                     <h5 class="font-medium text-gray-600 mb-1">Calificaciones PREGUNTA_1</h5>
-                    <img id="chart_pregunta_1" src="graficos/univariado_PREGUNTA_1.png" alt="Histograma PREGUNTA_1" class="mx-auto my-4 rounded shadow">
+                    <div id="chart_pregunta1_distribucion" class="content-placeholder">Placeholder para Histograma/Box Plot: PREGUNTA_1</div>
+                    <div id="table_pregunta1_stats" class="mt-4 content-placeholder">Placeholder para Tabla de Estadísticas: PREGUNTA_1</div>
                 </div>
                 <div>
                     <h5 class="font-medium text-gray-600 mb-1">Calificaciones PREGUNTA_2</h5>
-                    <img id="chart_pregunta_2" src="graficos/univariado_PREGUNTA_2.png" alt="Histograma PREGUNTA_2" class="mx-auto my-4 rounded shadow">
+                    <div id="chart_pregunta2_distribucion" class="content-placeholder">Placeholder para Histograma/Box Plot: PREGUNTA_2</div>
+                    <div id="table_pregunta2_stats" class="mt-4 content-placeholder">Placeholder para Tabla de Estadísticas: PREGUNTA_2</div>
                 </div>
                 <div>
                     <h5 class="font-medium text-gray-600 mb-1">Calificaciones PREGUNTA_3</h5>
-                    <img id="chart_pregunta_3" src="graficos/univariado_PREGUNTA_3.png" alt="Histograma PREGUNTA_3" class="mx-auto my-4 rounded shadow">
+                    <div id="chart_pregunta3_distribucion" class="content-placeholder">Placeholder para Histograma/Box Plot: PREGUNTA_3</div>
+                    <div id="table_pregunta3_stats" class="mt-4 content-placeholder">Placeholder para Tabla de Estadísticas: PREGUNTA_3</div>
                 </div>
                 <div>
                     <h5 class="font-medium text-gray-600 mb-1">Calificaciones PREGUNTA_4</h5>
-                    <img id="chart_pregunta_4" src="graficos/univariado_PREGUNTA_4.png" alt="Histograma PREGUNTA_4" class="mx-auto my-4 rounded shadow">
+                    <div id="chart_pregunta4_distribucion" class="content-placeholder">Placeholder para Histograma/Box Plot: PREGUNTA_4</div>
+                    <div id="table_pregunta4_stats" class="mt-4 content-placeholder">Placeholder para Tabla de Estadísticas: PREGUNTA_4</div>
                 </div>
             </div>
             <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Análisis Bivariado (Categórica y Numérica)</h3>
+            <p class="mb-4">Comparación de promedios de calificaciones entre diferentes grupos de clientes de Coltefinanciera.</p>
             <div class="grid md:grid-cols-2 gap-8 mb-8">
                 <div>
-                    <h4 class="text-lg font-medium text-gray-700 mb-2">Satisfacción Promedio por Ciudad</h4>
-                    <img id="chart_satisfaccion_ciudad" src="[Placeholder: ruta a gráfico PNG]" alt="Gráfico Satisfacción por Ciudad" class="mx-auto my-4 rounded shadow">
-                    <div id="table_satisfaccion_ciudad" class="overflow-x-auto"></div>
+                    <h4 class="text-lg font-medium text-gray-700 mb-2">Satisfacción Promedio por Ciudad de Agencia</h4>
+                    <div id="chart_satisfaccion_ciudad" class="content-placeholder">Placeholder para Gráfico de Barras: Promedio PREGUNTA_X por CIUDAD_AGENCIA</div>
+                    <div id="table_satisfaccion_ciudad" class="mt-4 content-placeholder">Placeholder para Tabla Resumen: Promedio PREGUNTA_X por CIUDAD_AGENCIA</div>
                 </div>
-                <!-- Repetir para otras combinaciones relevantes -->
+                <div>
+                    <h4 class="text-lg font-medium text-gray-700 mb-2">Satisfacción Promedio por Agencia/Ejecutivo</h4>
+                    <div id="chart_satisfaccion_agencia_ejecutivo" class="content-placeholder">Placeholder para Gráfico de Barras: Promedio PREGUNTA_X por AGENCIA_EJECUTIVO</div>
+                    <div id="table_satisfaccion_agencia_ejecutivo" class="mt-4 content-placeholder">Placeholder para Tabla Resumen: Promedio PREGUNTA_X por AGENCIA_EJECUTIVO</div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-medium text-gray-700 mb-2">Satisfacción Promedio por Segmento</h4>
+                    <div id="chart_satisfaccion_segmento" class="content-placeholder">Placeholder para Gráfico de Barras: Promedio PREGUNTA_X por SEGMENTO</div>
+                    <div id="table_satisfaccion_segmento" class="mt-4 content-placeholder">Placeholder para Tabla Resumen: Promedio PREGUNTA_X por SEGMENTO</div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-medium text-gray-700 mb-2">Satisfacción Promedio por Género</h4>
+                    <div id="chart_satisfaccion_genero" class="content-placeholder">Placeholder para Gráfico de Barras: Promedio PREGUNTA_X por GENERO</div>
+                    <div id="table_satisfaccion_genero" class="mt-4 content-placeholder">Placeholder para Tabla Resumen: Promedio PREGUNTA_X por GENERO</div>
+                </div>
             </div>
-            <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Análisis Bivariado (Categórica y Categórica)</h3>
+            <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Análisis Bivariado (Categórica y Categórica - Opcional)</h3>
+            <p class="mb-4">Exploración de relaciones entre variables categóricas.</p>
             <div class="grid md:grid-cols-2 gap-8 mb-8">
                 <div>
-                    <h4 class="text-lg font-medium text-gray-700 mb-2">Relación Género y Ciudad</h4>
-                    <img id="chart_genero_ciudad" src="[Placeholder: ruta a gráfico PNG]" alt="Gráfico Género por Ciudad" class="mx-auto my-4 rounded shadow">
-                    <div id="table_genero_ciudad" class="overflow-x-auto"></div>
+                    <h4 class="text-lg font-medium text-gray-700 mb-2">Relación Género y Ciudad de Agencia</h4>
+                    <div id="chart_genero_ciudad" class="content-placeholder">Placeholder para Gráfico (ej: Barras Agrupadas): GENERO por CIUDAD_AGENCIA</div>
+                    <div id="table_contingencia_genero_ciudad" class="mt-4 content-placeholder">Placeholder para Tabla de Contingencia: GENERO vs CIUDAD_AGENCIA</div>
                 </div>
             </div>
             <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Análisis de Comentarios (PREGUNTA_5)</h3>
-            <div class="bg-white p-6 rounded-lg shadow mb-6">
+            <p class="mb-4">Identificación de temas clave y ejemplos de comentarios de los clientes de Coltefinanciera.</p>
+            <div id="summary_comentarios_temas" class="bg-white p-6 rounded-lg shadow mb-6">
                 <h4 class="text-lg font-medium text-gray-700 mb-2">Temas Clave Identificados</h4>
-                <p id="text_temas_clave_comentarios" class="text-gray-600">La mayoría de los comentarios son positivos, destacando la calidad del servicio y la atención. Palabras como "buena", "servicio", "atención" y "excelente" son predominantes.</p>
-                <img id="wordcloud_comentarios" src="graficos/wordcloud_pregunta5.png" alt="WordCloud Comentarios" class="mx-auto my-4 rounded shadow">
+                <p id="text_temas_clave_comentarios" class="text-gray-600">[Placeholder: Párrafo resumen de los temas principales identificados en PREGUNTA_5. Ej: Calidad del servicio, tiempos de espera, amabilidad del personal, claridad de la información, etc.]</p>
+                <div id="wordcloud_comentarios_placeholder" class="content-placeholder mt-4">Placeholder para Nube de Palabras de Comentarios</div>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow">
+            <div id="summary_comentarios_ejemplos" class="bg-white p-6 rounded-lg shadow">
                 <h4 class="text-lg font-medium text-gray-700 mb-2">Ejemplos Representativos de Comentarios</h4>
                 <blockquote class="border-l-4 border-blue-500 pl-4 italic text-gray-600 my-2">
-                    <p id="ejemplo_comentario_1">"Excelente atención y servicio, muchas gracias."</p>
+                    <p id="ejemplo_comentario_1">"[Placeholder: Ejemplo de comentario positivo o constructivo de un cliente de Coltefinanciera]"</p>
                 </blockquote>
                 <blockquote class="border-l-4 border-red-500 pl-4 italic text-gray-600 my-2">
-                    <p id="ejemplo_comentario_2">"Me gustaría que los tiempos de espera fueran menores."</p>
+                    <p id="ejemplo_comentario_2">"[Placeholder: Ejemplo de comentario con área de oportunidad de un cliente de Coltefinanciera]"</p>
                 </blockquote>
             </div>
         </section>
         <!-- Sección 4: Pruebas de Hipótesis y Nivel de Confianza -->
         <section id="pruebas_hipotesis" class="mb-12 scroll-mt-20">
             <h2 class="text-2xl font-bold text-blue-700 mb-6 mt-10">Pruebas de Hipótesis y Nivel de Confianza</h2>
-            <p id="hipotesis_purpose_text" class="mb-4 text-lg">[Placeholder: Explicación del propósito de las pruebas de hipótesis para Coltefinanciera.]</p>
-            <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Pruebas de Normalidad</h3>
-            <div class="bg-white p-6 rounded-lg shadow mb-6">
-                <p id="text_pruebas_normalidad">[Placeholder: Resultados de pruebas de normalidad]</p>
+            <div class="accordion-header">Ver detalles de pruebas de hipótesis y gráficos</div>
+            <div class="accordion-content">
+                <p id="hipotesis_purpose_text" class="mb-4 text-lg">[Placeholder: Explicación del propósito de las pruebas de hipótesis para Coltefinanciera.]</p>
+                <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Pruebas de Normalidad</h3>
+                <div class="bg-white p-6 rounded-lg shadow mb-6">
+                    <p id="text_pruebas_normalidad">[Placeholder: Resultados de pruebas de normalidad]</p>
+                </div>
+                <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Resultados de Pruebas de Hipótesis</h3>
+                <div class="bg-white p-6 rounded-lg shadow mb-6">
+                    <p><strong>Hipótesis Nula (H0):</strong> [Placeholder]</p>
+                    <p><strong>Hipótesis Alternativa (H1):</strong> [Placeholder]</p>
+                    <p><strong>Prueba utilizada:</strong> [Placeholder]</p>
+                    <p><strong>Estadístico de prueba:</strong> [Placeholder]</p>
+                    <p><strong>P-valor:</strong> [Placeholder]</p>
+                    <p><strong>Decisión:</strong> [Placeholder]</p>
+                    <p class="mt-2"><strong>Interpretación:</strong> [Placeholder]</p>
+                </div>
+                <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Visualización de Hipótesis</h3>
+                <div class="grid md:grid-cols-3 gap-8 mb-8">
+                    <div id="chart_hipotesis_boxplot" class="content-placeholder">Boxplot</div>
+                    <div id="chart_hipotesis_histograma" class="content-placeholder">Histograma</div>
+                    <div id="chart_hipotesis_qqplot" class="content-placeholder">QQPlot</div>
+                </div>
+                <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Intervalos de Confianza</h3>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <p id="ic_media_global">[Placeholder: Intervalo de confianza para la media de satisfacción]</p>
+                    <p id="ic_diferencia_medias_grupos">[Placeholder: Intervalo de confianza para la diferencia de medias]</p>
+                </div>
             </div>
-            <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Resultados de Pruebas de Hipótesis</h3>
-            <div class="bg-white p-6 rounded-lg shadow mb-6">
-                <p><strong>Hipótesis Nula (H0):</strong> [Placeholder]</p>
-                <p><strong>Hipótesis Alternativa (H1):</strong> [Placeholder]</p>
-                <p><strong>Prueba utilizada:</strong> [Placeholder]</p>
-                <p><strong>Estadístico de prueba:</strong> [Placeholder]</p>
-                <p><strong>P-valor:</strong> [Placeholder]</p>
-                <p><strong>Decisión:</strong> [Placeholder]</p>
-                <p class="mt-2"><strong>Interpretación:</strong> [Placeholder]</p>
-            </div>
-            <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Intervalos de Confianza</h3>
-            <div class="bg-white p-6 rounded-lg shadow">
-                <p id="ic_media_global">[Placeholder: Intervalo de confianza para la media de satisfacción]</p>
-                <p id="ic_diferencia_medias_grupos">[Placeholder: Intervalo de confianza para la diferencia de medias]</p>
-            </div>
+            <!-- Tarjeta para visualización de inferencia -->
+            <div id="inferencia_segmento_card" class="mb-6"></div>
         </section>
         <!-- Sección 5: Hallazgos -->
         <section id="hallazgos" class="mb-12 scroll-mt-20">
@@ -219,6 +269,7 @@
         <p>Fecha de generación del reporte: <span id="report_generation_date">[Placeholder: Fecha actual]</span></p>
     </footer>
     <script src="static/coltefinanciera.js"></script>
+    <script src="static/coltefinanciera_autodata.js"></script>
     <script>
         document.getElementById('current_year').textContent = new Date().getFullYear();
         document.getElementById('report_generation_date').textContent = new Date().toLocaleDateString('es-CO');
@@ -235,6 +286,13 @@
                 }
             });
         });
+        // Llama acordeones generales y de comentarios desde el JS externo
+        if (window.setupGeneralAccordion) {
+            window.setupGeneralAccordion();
+        }
+        if (window.setupComentariosAccordion) {
+            window.setupComentariosAccordion();
+        }
     </script>
 </body>
 </html>

@@ -6,3 +6,6 @@ scipy
 jupyter
 openpyxl
 wordcloud
+sentence-transformers
+keybert
+scikit-learn

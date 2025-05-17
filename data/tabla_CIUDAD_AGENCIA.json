@@ -1,0 +1,37 @@
+[
+  {
+    "CIUDAD_AGENCIA":"Bogota D.C.",
+    "Frec. Absoluta":551,
+    "Frec. Relativa (%)":51.83
+  },
+  {
+    "CIUDAD_AGENCIA":"Medellin",
+    "Frec. Absoluta":304,
+    "Frec. Relativa (%)":28.6
+  },
+  {
+    "CIUDAD_AGENCIA":"Manizales",
+    "Frec. Absoluta":84,
+    "Frec. Relativa (%)":7.9
+  },
+  {
+    "CIUDAD_AGENCIA":"Bucaramanga",
+    "Frec. Absoluta":57,
+    "Frec. Relativa (%)":5.36
+  },
+  {
+    "CIUDAD_AGENCIA":"Cali Norte",
+    "Frec. Absoluta":28,
+    "Frec. Relativa (%)":2.63
+  },
+  {
+    "CIUDAD_AGENCIA":"Barranquilla",
+    "Frec. Absoluta":22,
+    "Frec. Relativa (%)":2.07
+  },
+  {
+    "CIUDAD_AGENCIA":"Pereira",
+    "Frec. Absoluta":17,
+    "Frec. Relativa (%)":1.6
+  }
+]
