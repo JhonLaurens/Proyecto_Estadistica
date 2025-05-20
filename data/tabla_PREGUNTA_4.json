@@ -1,18 +1,8 @@
 [
   {
-    "PREGUNTA_4":5.0,
-    "Frec. Absoluta":519,
-    "Frec. Relativa (%)":48.82
-  },
-  {
-    "PREGUNTA_4":4.0,
-    "Frec. Absoluta":410,
-    "Frec. Relativa (%)":38.57
-  },
-  {
-    "PREGUNTA_4":3.0,
-    "Frec. Absoluta":71,
-    "Frec. Relativa (%)":6.68
+    "PREGUNTA_4":1.0,
+    "Frec. Absoluta":20,
+    "Frec. Relativa (%)":1.88
   },
   {
     "PREGUNTA_4":2.0,
@@ -20,8 +10,18 @@
     "Frec. Relativa (%)":4.05
   },
   {
-    "PREGUNTA_4":1.0,
-    "Frec. Absoluta":20,
-    "Frec. Relativa (%)":1.88
+    "PREGUNTA_4":3.0,
+    "Frec. Absoluta":71,
+    "Frec. Relativa (%)":6.68
+  },
+  {
+    "PREGUNTA_4":4.0,
+    "Frec. Absoluta":410,
+    "Frec. Relativa (%)":38.57
+  },
+  {
+    "PREGUNTA_4":5.0,
+    "Frec. Absoluta":519,
+    "Frec. Relativa (%)":48.82
   }
 ]

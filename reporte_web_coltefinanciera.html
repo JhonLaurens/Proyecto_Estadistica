@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
+<head>    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Análisis de Satisfacción del Cliente - Coltefinanciera</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Análisis de Satisfacción del Cliente - Coltefinanciera</title>    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.plot.ly/plotly-2.29.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wordcloud2.js/1.2.2/wordcloud2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/coltefinanciera.css">
+    <meta name="theme-color" content="#3b82f6">
+    <meta name="description" content="Análisis estadístico de satisfacción de clientes para Coltefinanciera">
 </head>
 <body class="bg-gray-50 text-gray-800">
     <header class="bg-blue-700 text-white p-6 shadow-lg">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
             <h1 class="text-3xl font-bold">Análisis de Satisfacción del Cliente - Coltefinanciera</h1>
-            <div id="logo_placeholder" class="mt-4 md:mt-0">
-                <span class="text-sm italic">(Logo Coltefinanciera)</span>
+            <div id="logo_placeholder" class="mt-4 md:mt-0 flex items-center">
+                <span class="text-sm italic mr-4">(Logo Coltefinanciera)</span>
+                <button id="btn_theme_toggle" class="p-2 rounded-full bg-blue-800 hover:bg-blue-900 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                    </svg>
+                </button>
             </div>
         </div>
-    </header>
-    <nav id="navbar" class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-3">
-            <ul class="flex flex-wrap justify-center space-x-4 md:space-x-6">
-                <li><a href="#introduccion" class="text-blue-700 hover:text-blue-900 font-medium">Introducción</a></li>
-                <li><a href="#ficha_tecnica" class="text-blue-700 hover:text-blue-900 font-medium">Ficha Técnica</a></li>
-                <li><a href="#analisis_descriptivo" class="text-blue-700 hover:text-blue-900 font-medium">Análisis Descriptivo</a></li>
-                <li><a href="#pruebas_hipotesis" class="text-blue-700 hover:text-blue-900 font-medium">Pruebas de Hipótesis</a></li>
-                <li><a href="#hallazgos" class="text-blue-700 hover:text-blue-900 font-medium">Hallazgos</a></li>
-                <li><a href="#conclusiones" class="text-blue-700 hover:text-blue-900 font-medium">Conclusiones</a></li>
-            </ul>
+    </header>    <nav id="navbar" class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="navbar-mobile overflow-x-auto">
+                <ul class="flex space-x-4 md:space-x-6 md:justify-center">
+                    <li><a href="#introduccion" class="text-blue-700 hover:text-blue-900 font-medium whitespace-nowrap">Introducción</a></li>
+                    <li><a href="#ficha_tecnica" class="text-blue-700 hover:text-blue-900 font-medium whitespace-nowrap">Ficha Técnica</a></li>
+                    <li><a href="#metodologia" class="text-blue-700 hover:text-blue-900 font-medium whitespace-nowrap">Metodología</a></li>
+                    <li><a href="#analisis_descriptivo" class="text-blue-700 hover:text-blue-900 font-medium whitespace-nowrap">Análisis Descriptivo</a></li>
+                    <li><a href="#pruebas_hipotesis" class="text-blue-700 hover:text-blue-900 font-medium whitespace-nowrap">Pruebas de Hipótesis</a></li>
+                    <li><a href="#hallazgos" class="text-blue-700 hover:text-blue-900 font-medium whitespace-nowrap">Hallazgos</a></li>
+                    <li><a href="#conclusiones" class="text-blue-700 hover:text-blue-900 font-medium whitespace-nowrap">Conclusiones</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
     <main class="container mx-auto p-6">
@@ -44,8 +54,7 @@
                 <li>Analizar las calificaciones específicas otorgadas a diferentes aspectos del servicio (PREGUNTA_1 a PREGUNTA_4).</li>
                 <li>Extraer y categorizar los temas principales mencionados en los comentarios abiertos (PREGUNTA_5) para identificar preocupaciones y sugerencias recurrentes.</li>
                 <li>Validar estadísticamente las observaciones para proporcionar conclusiones robustas.</li>
-            </ul>
-        </section>
+            </ul>        </section>
         <!-- Sección 2: Ficha Técnica y Descripción de Variables -->
         <section id="ficha_tecnica" class="mb-12 scroll-mt-20">
             <h2 class="text-2xl font-bold text-blue-700 mb-6 mt-10">Ficha Técnica y Descripción de Variables</h2>
@@ -93,112 +102,172 @@
                             </tbody>
                         </table>
                     </div>
+                </div>            </div>
+        </section>
+        <!-- Sección Metodología -->
+        <section id="metodologia" class="mb-12 scroll-mt-20">
+            <h2 class="text-2xl font-bold text-blue-700 mb-6 mt-10">Metodología</h2>
+            <div class="bg-white p-6 rounded-lg shadow mb-6">
+                <h3 class="text-xl font-semibold text-blue-600 mb-4">Enfoque Metodológico</h3>
+                <p class="mb-4 text-lg leading-relaxed">
+                    Para el análisis de los datos de satisfacción del cliente de Coltefinanciera, se implementó una metodología mixta que combina técnicas de análisis estadístico descriptivo e inferencial. Este enfoque permite no solo caracterizar y resumir los datos recopilados, sino también realizar inferencias sobre la población de clientes y validar hipótesis específicas.
+                </p>
+                <div class="grid md:grid-cols-2 gap-8 mt-6">
+                    <div>
+                        <h4 class="text-lg font-medium text-gray-700 mb-2">Etapas del Análisis</h4>
+                        <ol class="list-decimal list-inside space-y-2">
+                            <li><strong>Preparación y limpieza de datos:</strong> Identificación y tratamiento de valores atípicos y faltantes.</li>
+                            <li><strong>Análisis exploratorio:</strong> Estadísticas descriptivas y visualizaciones para entender la distribución de los datos.</li>
+                            <li><strong>Análisis bivariado:</strong> Exploración de relaciones entre variables relevantes para la satisfacción del cliente.</li>
+                            <li><strong>Análisis inferencial:</strong> Pruebas estadísticas para validar hipótesis sobre diferencias entre grupos.</li>
+                            <li><strong>Análisis textual:</strong> Procesamiento y categorización de los comentarios abiertos de los clientes.</li>
+                        </ol>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-medium text-gray-700 mb-2">Técnicas Estadísticas Aplicadas</h4>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li><strong>Estadística descriptiva:</strong> Medidas de tendencia central, dispersión y distribución de frecuencias.</li>
+                            <li><strong>Pruebas de normalidad:</strong> Test de Shapiro-Wilk para verificar la distribución de las variables numéricas.</li>
+                            <li><strong>Pruebas de hipótesis:</strong> Mann-Whitney U y Kruskal-Wallis para comparaciones entre grupos.</li>
+                            <li><strong>Visualización de datos:</strong> Gráficos de barras, histogramas, boxplots y nubes de palabras.</li>
+                            <li><strong>Intervalos de confianza:</strong> Para estimación de parámetros poblacionales con 95% de confianza.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </section>
-        <!-- Sección 3: Análisis Descriptivo -->
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-semibold text-blue-600 mb-4">Criterios de Calidad</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-lg font-medium text-gray-700 mb-2">Validez y Confiabilidad</h4>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>Se utilizó un nivel de confianza del 95% para todas las inferencias estadísticas.</li>
+                            <li>Las pruebas estadísticas fueron seleccionadas según las características de distribución de los datos.</li>
+                            <li>Los resultados fueron validados mediante múltiples técnicas para asegurar la robustez de las conclusiones.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-medium text-gray-700 mb-2">Herramientas Utilizadas</h4>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li><strong>Python:</strong> Análisis estadístico y generación de visualizaciones.</li>
+                            <li><strong>Pandas & NumPy:</strong> Manipulación y procesamiento de datos.</li>
+                            <li><strong>Matplotlib & Seaborn:</strong> Creación de gráficos estadísticos.</li>
+                            <li><strong>SciPy:</strong> Pruebas estadísticas e inferencia.</li>
+                            <li><strong>NLTK & WordCloud:</strong> Análisis de texto y generación de nubes de palabras.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>        <!-- Sección 3: Análisis Descriptivo -->
         <section id="analisis_descriptivo" class="mb-12 scroll-mt-20">
             <h2 class="text-2xl font-bold text-blue-700 mb-6 mt-10">Análisis Descriptivo</h2>
             <p class="mb-6 text-lg">Análisis detallado de las características de los clientes de Coltefinanciera y sus respuestas a la encuesta.</p>
+            
+            <!-- Panel de Filtros -->
+            <div id="filtro_descriptivo" class="mb-8"></div>
+            
             <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Análisis Univariado</h3>
             <p class="mb-4">Distribución de frecuencias y estadísticas descriptivas para cada variable relevante.</p>
             <div class="grid md:grid-cols-2 gap-8 mb-8">
-                <div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
                     <h4 class="text-lg font-medium text-gray-700 mb-2">Distribución por Segmento</h4>
-                    <div id="chart_segmento_distribucion" class="content-placeholder">Placeholder para Gráfico de Barras/Pastel: Distribución de SEGMENTO</div>
-                    <div id="table_segmento_frecuencia" class="mt-4 content-placeholder">Placeholder para Tabla de Frecuencia: SEGMENTO</div>
+                    <div id="chart_segmento_interactivo" class="chart-container"></div>
+                    <div id="table_segmento_frecuencia" class="mt-4 overflow-x-auto"></div>
                 </div>
-                <div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
                     <h4 class="text-lg font-medium text-gray-700 mb-2">Distribución por Ciudad de Agencia</h4>
-                    <div id="chart_ciudad_distribucion" class="content-placeholder">Placeholder para Gráfico: Distribución de CIUDAD_AGENCIA</div>
-                    <div id="table_ciudad_frecuencia" class="mt-4 content-placeholder">Placeholder para Tabla de Frecuencia: CIUDAD_AGENCIA</div>
-                </div>
-                <div>
+                    <div id="chart_ciudad_interactivo" class="chart-container"></div>
+                    <div id="table_ciudad_frecuencia" class="mt-4 overflow-x-auto"></div>
+                </div>                <div class="bg-white p-4 rounded-lg shadow-md">
                     <h4 class="text-lg font-medium text-gray-700 mb-2">Distribución por Agencia/Ejecutivo</h4>
-                    <div id="chart_agencia_ejecutivo_distribucion" class="content-placeholder">Placeholder para Gráfico: Distribución de AGENCIA_EJECUTIVO</div>
-                    <div id="table_agencia_ejecutivo_frecuencia" class="mt-4 content-placeholder">Placeholder para Tabla de Frecuencia: AGENCIA_EJECUTIVO</div>
+                    <div id="chart_agencia_ejecutivo_distribucion" class="chart-container"></div>
+                    <div id="table_agencia_ejecutivo_frecuencia" class="mt-4 overflow-x-auto"></div>
                 </div>
-                <div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
                     <h4 class="text-lg font-medium text-gray-700 mb-2">Distribución por Género</h4>
-                    <div id="chart_genero_distribucion" class="content-placeholder">Placeholder para Gráfico: Distribución de GENERO</div>
-                    <div id="table_genero_frecuencia" class="mt-4 content-placeholder">Placeholder para Tabla de Frecuencia: GENERO</div>
+                    <div id="chart_genero_interactivo" class="chart-container"></div>
+                    <div id="table_genero_frecuencia" class="mt-4 overflow-x-auto"></div>
                 </div>
             </div>
             <h4 class="text-lg font-medium text-gray-700 mb-2 mt-8">Análisis de Calificaciones y Edad</h4>
-            <div class="grid md:grid-cols-2 gap-8 mb-8">
-                <div>
+            <div class="grid md:grid-cols-2 gap-8 mb-8">                <div class="bg-white p-4 rounded-lg shadow-md">
                     <h5 class="font-medium text-gray-600 mb-1">Edad de los Clientes</h5>
-                    <div id="chart_edad_distribucion" class="content-placeholder">Placeholder para Histograma/Box Plot: Edad</div>
-                    <div id="table_edad_stats" class="mt-4 content-placeholder">Placeholder para Tabla de Estadísticas: Edad (media, mediana, std, etc.)</div>
+                    <div id="chart_edad_distribucion" class="chart-container"></div>
+                    <div id="table_edad_stats" class="mt-4 overflow-x-auto"></div>
                 </div>
-                <div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
                     <h5 class="font-medium text-gray-600 mb-1">Calificaciones PREGUNTA_1</h5>
-                    <div id="chart_pregunta1_distribucion" class="content-placeholder">Placeholder para Histograma/Box Plot: PREGUNTA_1</div>
-                    <div id="table_pregunta1_stats" class="mt-4 content-placeholder">Placeholder para Tabla de Estadísticas: PREGUNTA_1</div>
-                </div>
-                <div>
+                    <div id="chart_pregunta1_interactivo" class="chart-container"></div>
+                    <div id="table_pregunta1_stats" class="mt-4 overflow-x-auto"></div>
+                </div>                <div class="bg-white p-4 rounded-lg shadow-md">
                     <h5 class="font-medium text-gray-600 mb-1">Calificaciones PREGUNTA_2</h5>
-                    <div id="chart_pregunta2_distribucion" class="content-placeholder">Placeholder para Histograma/Box Plot: PREGUNTA_2</div>
-                    <div id="table_pregunta2_stats" class="mt-4 content-placeholder">Placeholder para Tabla de Estadísticas: PREGUNTA_2</div>
-                </div>
-                <div>
+                    <div id="chart_pregunta2_distribucion" class="chart-container"></div>
+                    <div id="table_pregunta2_stats" class="mt-4 overflow-x-auto"></div>
+                </div>                <div class="bg-white p-4 rounded-lg shadow-md">
                     <h5 class="font-medium text-gray-600 mb-1">Calificaciones PREGUNTA_3</h5>
-                    <div id="chart_pregunta3_distribucion" class="content-placeholder">Placeholder para Histograma/Box Plot: PREGUNTA_3</div>
-                    <div id="table_pregunta3_stats" class="mt-4 content-placeholder">Placeholder para Tabla de Estadísticas: PREGUNTA_3</div>
-                </div>
-                <div>
+                    <div id="chart_pregunta3_distribucion" class="chart-container"></div>
+                    <div id="table_pregunta3_stats" class="mt-4 overflow-x-auto"></div>
+                </div>                <div class="bg-white p-4 rounded-lg shadow-md">
                     <h5 class="font-medium text-gray-600 mb-1">Calificaciones PREGUNTA_4</h5>
-                    <div id="chart_pregunta4_distribucion" class="content-placeholder">Placeholder para Histograma/Box Plot: PREGUNTA_4</div>
-                    <div id="table_pregunta4_stats" class="mt-4 content-placeholder">Placeholder para Tabla de Estadísticas: PREGUNTA_4</div>
+                    <div id="chart_pregunta4_distribucion" class="chart-container"></div>
+                    <div id="table_pregunta4_stats" class="mt-4 overflow-x-auto"></div>
                 </div>
             </div>
             <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Análisis Bivariado (Categórica y Numérica)</h3>
             <p class="mb-4">Comparación de promedios de calificaciones entre diferentes grupos de clientes de Coltefinanciera.</p>
-            <div class="grid md:grid-cols-2 gap-8 mb-8">
-                <div>
+            
+            <!-- Panel de Filtros para Análisis Bivariado -->
+            <div id="filtro_bivariado" class="mb-8"></div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-8">                <div class="bg-white p-4 rounded-lg shadow-md">
                     <h4 class="text-lg font-medium text-gray-700 mb-2">Satisfacción Promedio por Ciudad de Agencia</h4>
-                    <div id="chart_satisfaccion_ciudad" class="content-placeholder">Placeholder para Gráfico de Barras: Promedio PREGUNTA_X por CIUDAD_AGENCIA</div>
-                    <div id="table_satisfaccion_ciudad" class="mt-4 content-placeholder">Placeholder para Tabla Resumen: Promedio PREGUNTA_X por CIUDAD_AGENCIA</div>
-                </div>
-                <div>
+                    <div id="chart_satisfaccion_ciudad_interactivo" class="chart-container"></div>
+                    <div id="table_satisfaccion_ciudad" class="mt-4 overflow-x-auto"></div>
+                </div>                <div class="bg-white p-4 rounded-lg shadow-md">
                     <h4 class="text-lg font-medium text-gray-700 mb-2">Satisfacción Promedio por Agencia/Ejecutivo</h4>
-                    <div id="chart_satisfaccion_agencia_ejecutivo" class="content-placeholder">Placeholder para Gráfico de Barras: Promedio PREGUNTA_X por AGENCIA_EJECUTIVO</div>
-                    <div id="table_satisfaccion_agencia_ejecutivo" class="mt-4 content-placeholder">Placeholder para Tabla Resumen: Promedio PREGUNTA_X por AGENCIA_EJECUTIVO</div>
+                    <div id="chart_satisfaccion_agencia_ejecutivo" class="chart-container"></div>
+                    <div id="table_satisfaccion_agencia_ejecutivo" class="mt-4 overflow-x-auto"></div>
                 </div>
-                <div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
                     <h4 class="text-lg font-medium text-gray-700 mb-2">Satisfacción Promedio por Segmento</h4>
-                    <div id="chart_satisfaccion_segmento" class="content-placeholder">Placeholder para Gráfico de Barras: Promedio PREGUNTA_X por SEGMENTO</div>
-                    <div id="table_satisfaccion_segmento" class="mt-4 content-placeholder">Placeholder para Tabla Resumen: Promedio PREGUNTA_X por SEGMENTO</div>
-                </div>
-                <div>
+                    <div id="chart_satisfaccion_segmento_boxplot" class="chart-container"></div>
+                    <div id="table_satisfaccion_segmento" class="mt-4 overflow-x-auto"></div>
+                </div>                <div class="bg-white p-4 rounded-lg shadow-md">
                     <h4 class="text-lg font-medium text-gray-700 mb-2">Satisfacción Promedio por Género</h4>
-                    <div id="chart_satisfaccion_genero" class="content-placeholder">Placeholder para Gráfico de Barras: Promedio PREGUNTA_X por GENERO</div>
-                    <div id="table_satisfaccion_genero" class="mt-4 content-placeholder">Placeholder para Tabla Resumen: Promedio PREGUNTA_X por GENERO</div>
+                    <div id="chart_satisfaccion_genero" class="chart-container"></div>
+                    <div id="table_satisfaccion_genero" class="mt-4 overflow-x-auto"></div>
                 </div>
             </div>
-            <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Análisis Bivariado (Categórica y Categórica - Opcional)</h3>
+            <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Análisis Bivariado (Categórica y Categórica)</h3>
             <p class="mb-4">Exploración de relaciones entre variables categóricas.</p>
-            <div class="grid md:grid-cols-2 gap-8 mb-8">
-                <div>
+            <div class="grid md:grid-cols-2 gap-8 mb-8">                <div class="bg-white p-4 rounded-lg shadow-md">
                     <h4 class="text-lg font-medium text-gray-700 mb-2">Relación Género y Ciudad de Agencia</h4>
-                    <div id="chart_genero_ciudad" class="content-placeholder">Placeholder para Gráfico (ej: Barras Agrupadas): GENERO por CIUDAD_AGENCIA</div>
-                    <div id="table_contingencia_genero_ciudad" class="mt-4 content-placeholder">Placeholder para Tabla de Contingencia: GENERO vs CIUDAD_AGENCIA</div>
+                    <div id="chart_contingencia_heatmap" class="chart-container"></div>
+                    <div id="table_contingencia_genero_ciudad" class="mt-4 overflow-x-auto"></div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h4 class="text-lg font-medium text-gray-700 mb-2">Ciudad de Agencia vs Tipo de Ejecutivo</h4>
+                    <div id="chart_ciudad_ejecutivo" class="chart-container"></div>
                 </div>
             </div>
             <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Análisis de Comentarios (PREGUNTA_5)</h3>
             <p class="mb-4">Identificación de temas clave y ejemplos de comentarios de los clientes de Coltefinanciera.</p>
+            
+            <!-- Panel de Filtros para Comentarios -->
+            <div id="filtro_comentarios" class="mb-8"></div>
+            
             <div id="summary_comentarios_temas" class="bg-white p-6 rounded-lg shadow mb-6">
                 <h4 class="text-lg font-medium text-gray-700 mb-2">Temas Clave Identificados</h4>
-                <p id="text_temas_clave_comentarios" class="text-gray-600">[Placeholder: Párrafo resumen de los temas principales identificados en PREGUNTA_5. Ej: Calidad del servicio, tiempos de espera, amabilidad del personal, claridad de la información, etc.]</p>
-                <div id="wordcloud_comentarios_placeholder" class="content-placeholder mt-4">Placeholder para Nube de Palabras de Comentarios</div>
+                <p id="text_temas_clave_comentarios" class="text-gray-600">Los comentarios de los clientes se centran principalmente en la calidad del servicio al cliente, los tiempos de respuesta, la amabilidad del personal y la claridad de la información proporcionada. Se destaca la experiencia positiva con los gerentes de agencia y la facilidad de uso de los productos financieros.</p>
+                <div id="wordcloud_comentarios_placeholder" class="mt-4"></div>
             </div>
             <div id="summary_comentarios_ejemplos" class="bg-white p-6 rounded-lg shadow">
                 <h4 class="text-lg font-medium text-gray-700 mb-2">Ejemplos Representativos de Comentarios</h4>
                 <blockquote class="border-l-4 border-blue-500 pl-4 italic text-gray-600 my-2">
-                    <p id="ejemplo_comentario_1">"[Placeholder: Ejemplo de comentario positivo o constructivo de un cliente de Coltefinanciera]"</p>
+                    <p id="ejemplo_comentario_1">"Excelente atención por parte del gerente de agencia. Muy claro con la información y rápida respuesta a mis solicitudes."</p>
                 </blockquote>
                 <blockquote class="border-l-4 border-red-500 pl-4 italic text-gray-600 my-2">
-                    <p id="ejemplo_comentario_2">"[Placeholder: Ejemplo de comentario con área de oportunidad de un cliente de Coltefinanciera]"</p>
+                    <p id="ejemplo_comentario_2">"Mejorar los tiempos de respuesta en la aprobación de créditos y la comunicación durante el proceso."</p>
                 </blockquote>
             </div>
         </section>
@@ -206,7 +275,7 @@
         <section id="pruebas_hipotesis" class="mb-12 scroll-mt-20">
             <h2 class="text-2xl font-bold text-blue-700 mb-6 mt-10">Pruebas de Hipótesis y Nivel de Confianza</h2>
             <div class="accordion-header">Ver detalles de pruebas de hipótesis y gráficos</div>
-            <div class="accordion-content">
+            <div class="accordion-content" style="overflow-x:auto;">
                 <p id="hipotesis_purpose_text" class="mb-4 text-lg">[Placeholder: Explicación del propósito de las pruebas de hipótesis para Coltefinanciera.]</p>
                 <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Pruebas de Normalidad</h3>
                 <div class="bg-white p-6 rounded-lg shadow mb-6">
@@ -222,11 +291,9 @@
                     <p><strong>Decisión:</strong> [Placeholder]</p>
                     <p class="mt-2"><strong>Interpretación:</strong> [Placeholder]</p>
                 </div>
-                <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Visualización de Hipótesis</h3>
-                <div class="grid md:grid-cols-3 gap-8 mb-8">
-                    <div id="chart_hipotesis_boxplot" class="content-placeholder">Boxplot</div>
-                    <div id="chart_hipotesis_histograma" class="content-placeholder">Histograma</div>
-                    <div id="chart_hipotesis_qqplot" class="content-placeholder">QQPlot</div>
+                <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Visualización de Hipótesis</h3>                <div class="grid md:grid-cols-3 gap-8 mb-8">                    <div id="chart_hipotesis_boxplot" class="chart-container bg-white p-4 rounded-lg shadow-md">Boxplot</div>
+                    <div id="chart_hipotesis_histograma" class="chart-container bg-white p-4 rounded-lg shadow-md">Histograma</div>
+                    <div id="chart_hipotesis_qqplot" class="chart-container bg-white p-4 rounded-lg shadow-md">QQPlot</div>
                 </div>
                 <h3 class="text-xl font-semibold text-blue-600 mb-4 mt-6">Intervalos de Confianza</h3>
                 <div class="bg-white p-6 rounded-lg shadow">
@@ -262,37 +329,20 @@
                 </ul>
             </div>
         </section>
-    </main>
-    <footer class="bg-gray-800 text-gray-300 text-center p-6 mt-12">
+    </main>    <footer class="bg-gray-800 text-gray-300 text-center p-6 mt-12">
         <p>&copy; <span id="current_year"></span> Coltefinanciera. Todos los derechos reservados.</p>
         <p>Análisis realizado con datos de Encuesta de Satisfacción del Cliente - Coltefinanciera.</p>
-        <p>Fecha de generación del reporte: <span id="report_generation_date">[Placeholder: Fecha actual]</span></p>
-    </footer>
-    <script src="static/coltefinanciera.js"></script>
+        <p>Fecha de generación del reporte: <span id="report_generation_date">[Placeholder: Fecha actual]</span></p>    </footer>    <script src="static/coltefinanciera.js"></script>
+    <script src="static/coltefinanciera_data_loader.js"></script>
     <script src="static/coltefinanciera_autodata.js"></script>
-    <script>
-        document.getElementById('current_year').textContent = new Date().getFullYear();
-        document.getElementById('report_generation_date').textContent = new Date().toLocaleDateString('es-CO');
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    const offset = document.getElementById('navbar').offsetHeight || 60;
-                    const elementPosition = targetElement.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - offset;
-                    window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-                }
-            });
-        });
-        // Llama acordeones generales y de comentarios desde el JS externo
-        if (window.setupGeneralAccordion) {
-            window.setupGeneralAccordion();
-        }
-        if (window.setupComentariosAccordion) {
-            window.setupComentariosAccordion();
-        }
-    </script>
+    <script src="static/coltefinanciera_charts_theme.js"></script>
+    <script src="static/coltefinanciera_charts_init.js"></script>
+    <script src="static/coltefinanciera_charts.js"></script>
+    <script src="static/coltefinanciera_controls.js"></script>
+    <script src="static/coltefinanciera_interactive_charts.js"></script>
+    <script src="static/coltefinanciera_filtros.js"></script>
+    <script src="static/coltefinanciera_filter_charts.js"></script>
+    <script src="static/coltefinanciera_export.js"></script>
+    <script src="static/test_site_functionality.js"></script>
 </body>
 </html>

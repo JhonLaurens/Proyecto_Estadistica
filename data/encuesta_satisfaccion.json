@@ -1,0 +1,37 @@
+{
+  "informacion_general": {
+    "fecha_generacion": "2025-05-20",
+    "total_encuestas": 1063,
+    "periodo_estudio": "01/01/2025 - 30/04/2025"
+  },
+  "estadisticas_preguntas": {
+    "PREGUNTA_1": {
+      "media": 4.389463781749765,
+      "mediana": 5.0,
+      "desviacion": 0.9270785139114737,
+      "min": 1.0,
+      "max": 5.0
+    },
+    "PREGUNTA_2": {
+      "media": 4.42238946378175,
+      "mediana": 5.0,
+      "desviacion": 0.8103306216282301,
+      "min": 1.0,
+      "max": 5.0
+    },
+    "PREGUNTA_3": {
+      "media": 4.399811853245532,
+      "mediana": 5.0,
+      "desviacion": 0.8217156059563273,
+      "min": 1.0,
+      "max": 5.0
+    },
+    "PREGUNTA_4": {
+      "media": 4.284101599247413,
+      "mediana": 4.0,
+      "desviacion": 0.8978952775264049,
+      "min": 1.0,
+      "max": 5.0
+    }
+  }
+}
