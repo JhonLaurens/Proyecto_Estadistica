@@ -9,3 +9,7 @@ wordcloud
 sentence-transformers
 keybert
 scikit-learn
+statsmodels
+plotly
+pillow
+xlsxwriter
