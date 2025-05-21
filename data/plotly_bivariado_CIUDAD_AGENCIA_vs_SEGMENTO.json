@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+      "x": [
+        "Barranquilla",
+        "Bogota D.C.",
+        "Bucaramanga",
+        "Cali Norte",
+        "Manizales",
+        "Medellin",
+        "Pereira"
+      ],
+      "y": [
+        0.0,
+        4.3557168784029034,
+        0.0,
+        0.0,
+        0.0,
+        4.276315789473684,
+        0.0
+      ],
+      "type": "bar",
+      "name": "Empresas"
+    },
+    {
+      "x": [
+        "Barranquilla",
+        "Bogota D.C.",
+        "Bucaramanga",
+        "Cali Norte",
+        "Manizales",
+        "Medellin",
+        "Pereira"
+      ],
+      "y": [
+        100.0,
+        95.6442831215971,
+        100.0,
+        100.0,
+        100.0,
+        95.72368421052632,
+        100.0
+      ],
+      "type": "bar",
+      "name": "Personas"
+    }
+  ],
+  "layout": {
+    "title": "Distribución de SEGMENTO por CIUDAD_AGENCIA",
+    "xaxis": {
+      "title": "CIUDAD_AGENCIA"
+    },
+    "yaxis": {
+      "title": "Porcentaje (%)"
+    },
+    "barmode": "group"
+  }
+}

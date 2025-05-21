@@ -1,0 +1,12 @@
+{
+  "GERENTE DE AGENCIA":{
+    "F":100.0,
+    "M":100.0,
+    "No aplica":0.0
+  },
+  "GERENTE DE CUENTA EMPRESAS":{
+    "F":0.0,
+    "M":0.0,
+    "No aplica":100.0
+  }
+}

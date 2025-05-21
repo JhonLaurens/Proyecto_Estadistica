@@ -1,0 +1,38 @@
+{
+  "data": [
+    {
+      "x": [
+        "GERENTE DE AGENCIA",
+        "GERENTE DE CUENTA EMPRESAS"
+      ],
+      "y": [
+        0.0,
+        100.0
+      ],
+      "type": "bar",
+      "name": "Empresas"
+    },
+    {
+      "x": [
+        "GERENTE DE AGENCIA",
+        "GERENTE DE CUENTA EMPRESAS"
+      ],
+      "y": [
+        100.0,
+        0.0
+      ],
+      "type": "bar",
+      "name": "Personas"
+    }
+  ],
+  "layout": {
+    "title": "Distribución de SEGMENTO por TIPO_EJECUTIVO",
+    "xaxis": {
+      "title": "TIPO_EJECUTIVO"
+    },
+    "yaxis": {
+      "title": "Porcentaje (%)"
+    },
+    "barmode": "group"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "data": [
+    {
+      "x": [
+        "F",
+        "M",
+        "No aplica"
+      ],
+      "y": [
+        100.0,
+        100.0,
+        0.0
+      ],
+      "type": "bar",
+      "name": "GERENTE DE AGENCIA"
+    },
+    {
+      "x": [
+        "F",
+        "M",
+        "No aplica"
+      ],
+      "y": [
+        0.0,
+        0.0,
+        100.0
+      ],
+      "type": "bar",
+      "name": "GERENTE DE CUENTA EMPRESAS"
+    }
+  ],
+  "layout": {
+    "title": "Distribución de TIPO_EJECUTIVO por GENERO",
+    "xaxis": {
+      "title": "GENERO"
+    },
+    "yaxis": {
+      "title": "Porcentaje (%)"
+    },
+    "barmode": "group"
+  }
+}

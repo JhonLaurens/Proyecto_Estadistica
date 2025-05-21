@@ -1,0 +1,74 @@
+{
+  "cantidad":{
+    "Pereira":17,
+    "Cali Norte":28,
+    "Barranquilla":22,
+    "Manizales":84,
+    "Bucaramanga":57,
+    "Medellin":304,
+    "Bogota D.C.":551
+  },
+  "Minimo":{
+    "Pereira":4.0,
+    "Cali Norte":1.0,
+    "Barranquilla":2.0,
+    "Manizales":1.0,
+    "Bucaramanga":1.0,
+    "Medellin":1.0,
+    "Bogota D.C.":1.0
+  },
+  "Q1":{
+    "Pereira":5.0,
+    "Cali Norte":4.75,
+    "Barranquilla":4.25,
+    "Manizales":4.0,
+    "Bucaramanga":5.0,
+    "Medellin":4.0,
+    "Bogota D.C.":4.0
+  },
+  "Mediana":{
+    "Pereira":5.0,
+    "Cali Norte":5.0,
+    "Barranquilla":5.0,
+    "Manizales":5.0,
+    "Bucaramanga":5.0,
+    "Medellin":5.0,
+    "Bogota D.C.":5.0
+  },
+  "Promedio":{
+    "Pereira":4.88,
+    "Cali Norte":4.64,
+    "Barranquilla":4.59,
+    "Manizales":4.55,
+    "Bucaramanga":4.53,
+    "Medellin":4.46,
+    "Bogota D.C.":4.28
+  },
+  "Q3":{
+    "Pereira":5.0,
+    "Cali Norte":5.0,
+    "Barranquilla":5.0,
+    "Manizales":5.0,
+    "Bucaramanga":5.0,
+    "Medellin":5.0,
+    "Bogota D.C.":5.0
+  },
+  "Maximo":{
+    "Pereira":5.0,
+    "Cali Norte":5.0,
+    "Barranquilla":5.0,
+    "Manizales":5.0,
+    "Bucaramanga":5.0,
+    "Medellin":5.0,
+    "Bogota D.C.":5.0
+  },
+  "Desviacion":{
+    "Pereira":0.33,
+    "Cali Norte":0.83,
+    "Barranquilla":0.8,
+    "Manizales":0.8,
+    "Bucaramanga":1.07,
+    "Medellin":0.84,
+    "Bogota D.C.":0.98
+  }
+}

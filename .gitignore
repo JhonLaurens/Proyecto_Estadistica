@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entorno virtual
+.venv/
+venv/
+ENV/
+
+# Archivos de distribución
+dist/
+build/
+*.egg-info/
+
+# Archivos de logs
+*.log
+
+# Archivos temporales
+*.tmp
+*.bak
+*.swp
+
+# Archivos específicos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de IDE/editores
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Archivos grandes o sensibles (opcional, descomenta si es necesario)
+# *.csv
+# *.xlsx
+
+# Carpetas específicas del proyecto (opcional)
+# /datos_privados/

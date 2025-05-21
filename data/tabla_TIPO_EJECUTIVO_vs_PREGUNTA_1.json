@@ -1,0 +1,34 @@
+{
+  "cantidad":{
+    "GERENTE DE AGENCIA":1026,
+    "GERENTE DE CUENTA EMPRESAS":37
+  },
+  "Minimo":{
+    "GERENTE DE AGENCIA":1.0,
+    "GERENTE DE CUENTA EMPRESAS":1.0
+  },
+  "Q1":{
+    "GERENTE DE AGENCIA":4.0,
+    "GERENTE DE CUENTA EMPRESAS":3.0
+  },
+  "Mediana":{
+    "GERENTE DE AGENCIA":5.0,
+    "GERENTE DE CUENTA EMPRESAS":4.0
+  },
+  "Promedio":{
+    "GERENTE DE AGENCIA":4.41,
+    "GERENTE DE CUENTA EMPRESAS":3.84
+  },
+  "Q3":{
+    "GERENTE DE AGENCIA":5.0,
+    "GERENTE DE CUENTA EMPRESAS":5.0
+  },
+  "Maximo":{
+    "GERENTE DE AGENCIA":5.0,
+    "GERENTE DE CUENTA EMPRESAS":5.0
+  },
+  "Desviacion":{
+    "GERENTE DE AGENCIA":0.91,
+    "GERENTE DE CUENTA EMPRESAS":1.26
+  }
+}

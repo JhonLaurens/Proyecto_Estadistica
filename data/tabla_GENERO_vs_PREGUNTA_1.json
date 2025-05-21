@@ -1,0 +1,42 @@
+{
+  "cantidad":{
+    "F":597,
+    "M":429,
+    "No aplica":37
+  },
+  "Minimo":{
+    "F":1.0,
+    "M":1.0,
+    "No aplica":1.0
+  },
+  "Q1":{
+    "F":4.0,
+    "M":4.0,
+    "No aplica":3.0
+  },
+  "Mediana":{
+    "F":5.0,
+    "M":5.0,
+    "No aplica":4.0
+  },
+  "Promedio":{
+    "F":4.45,
+    "M":4.36,
+    "No aplica":3.84
+  },
+  "Q3":{
+    "F":5.0,
+    "M":5.0,
+    "No aplica":5.0
+  },
+  "Maximo":{
+    "F":5.0,
+    "M":5.0,
+    "No aplica":5.0
+  },
+  "Desviacion":{
+    "F":0.9,
+    "M":0.92,
+    "No aplica":1.26
+  }
+}

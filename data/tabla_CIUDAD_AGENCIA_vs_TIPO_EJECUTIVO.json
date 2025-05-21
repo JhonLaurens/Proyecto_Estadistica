@@ -1,0 +1,20 @@
+{
+  "GERENTE DE AGENCIA":{
+    "Barranquilla":100.0,
+    "Bogota D.C.":95.64,
+    "Bucaramanga":100.0,
+    "Cali Norte":100.0,
+    "Manizales":100.0,
+    "Medellin":95.72,
+    "Pereira":100.0
+  },
+  "GERENTE DE CUENTA EMPRESAS":{
+    "Barranquilla":0.0,
+    "Bogota D.C.":4.36,
+    "Bucaramanga":0.0,
+    "Cali Norte":0.0,
+    "Manizales":0.0,
+    "Medellin":4.28,
+    "Pereira":0.0
+  }
+}

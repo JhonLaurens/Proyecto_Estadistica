@@ -429,7 +429,7 @@ function updateChartsTheme() {
             Plotly.relayout(el.id, layout);
         }
     });
-}
+
 
 // Optimizaciones de rendimiento
 function optimizePerformance() {

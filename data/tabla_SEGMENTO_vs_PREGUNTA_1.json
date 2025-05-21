@@ -1,0 +1,34 @@
+{
+  "cantidad":{
+    "Personas":1026,
+    "Empresas":37
+  },
+  "Minimo":{
+    "Personas":1.0,
+    "Empresas":1.0
+  },
+  "Q1":{
+    "Personas":4.0,
+    "Empresas":3.0
+  },
+  "Mediana":{
+    "Personas":5.0,
+    "Empresas":4.0
+  },
+  "Promedio":{
+    "Personas":4.41,
+    "Empresas":3.84
+  },
+  "Q3":{
+    "Personas":5.0,
+    "Empresas":5.0
+  },
+  "Maximo":{
+    "Personas":5.0,
+    "Empresas":5.0
+  },
+  "Desviacion":{
+    "Personas":0.91,
+    "Empresas":1.26
+  }
+}

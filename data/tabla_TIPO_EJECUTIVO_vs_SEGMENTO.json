@@ -1,0 +1,10 @@
+{
+  "Empresas":{
+    "GERENTE DE AGENCIA":0.0,
+    "GERENTE DE CUENTA EMPRESAS":100.0
+  },
+  "Personas":{
+    "GERENTE DE AGENCIA":100.0,
+    "GERENTE DE CUENTA EMPRESAS":0.0
+  }
+}

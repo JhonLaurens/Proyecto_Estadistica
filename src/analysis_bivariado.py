@@ -32,7 +32,8 @@ def bivariado_cat_cat(df, var1, var2, top_n=5, export_excel_path=None, export_pd
         df (pandas.DataFrame): DataFrame con los datos a analizar
         var1 (str): Nombre de la primera variable categórica (eje X)
         var2 (str): Nombre de la segunda variable categórica (colores/series)
-        top_n (int, opcional): Número máximo de categorías a mostrar. Por defecto 5.
+        top_n (int o None, opcional): Número máximo de categorías a mostrar. Por defecto 5.
+            Si es None, se utilizan todas las categorías.
         export_excel_path (str, opcional): Ruta donde exportar resultados en Excel
         export_pdf_path (str, opcional): Ruta donde exportar gráficos en PDF
         export_png_dir (str, opcional): Directorio donde guardar imágenes PNG
@@ -45,9 +46,12 @@ def bivariado_cat_cat(df, var1, var2, top_n=5, export_excel_path=None, export_pd
         >>> bivariado_cat_cat(encuestas_df, 'CIUDAD_AGENCIA', 'SEGMENTO', 
                              export_json_dir='data')
     """
-    # Filtrar solo las top_n categorías más frecuentes de var1
-    top_vals = df[var1].value_counts().nlargest(top_n).index
-    df_top = df[df[var1].isin(top_vals)]
+    # Filtrar solo las top_n categorías más frecuentes de var1, o usar todas si top_n es None
+    if top_n is None:
+        df_top = df.copy()  # Usar todas las categorías
+    else:
+        top_vals = df[var1].value_counts().nlargest(top_n).index
+        df_top = df[df[var1].isin(top_vals)]
     
     # Crear tabla de contingencia normalizada por filas
     cross_tab = pd.crosstab(df_top[var1], df_top[var2], normalize='index') * 100
@@ -62,12 +66,12 @@ def bivariado_cat_cat(df, var1, var2, top_n=5, export_excel_path=None, export_pd
         top_cat = cross_tab.loc[idx].idxmax()
         top_val = cross_tab.loc[idx].max()
         print(f"- En {idx}: {top_cat} es el más frecuente ({top_val:.1f}%)")
-        
-    # Crear visualización con Matplotlib
+          # Crear visualización con Matplotlib
     ax = cross_tab.plot(kind='bar', stacked=False, figsize=(14, 8), colormap='Spectral')
     plt.title(f'Distribución de {var2} por {var1} (Top {top_n})', fontsize=16, fontweight='bold')
     plt.ylabel('Porcentaje dentro de ' + var1, fontsize=12)
-    plt.xlabel(var1, fontsize=12)    plt.xticks(rotation=45, ha='right')
+    plt.xlabel(var1, fontsize=12)
+    plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
     fig = plt.gcf()
     
@@ -128,7 +132,8 @@ def bivariado_cat_num(df, var_cat, var_num, top_n=5, export_excel_path=None, exp
         df (pandas.DataFrame): DataFrame con los datos a analizar
         var_cat (str): Nombre de la variable categórica (eje X)
         var_num (str): Nombre de la variable numérica (eje Y)
-        top_n (int, opcional): Número máximo de categorías a mostrar. Por defecto 5.
+        top_n (int o None, opcional): Número máximo de categorías a mostrar. Por defecto 5.
+            Si es None, se utilizan todas las categorías.
         export_excel_path (str, opcional): Ruta donde exportar resultados en Excel
         export_pdf_path (str, opcional): Ruta donde exportar gráficos en PDF
         export_png_dir (str, opcional): Directorio donde guardar imágenes PNG
@@ -141,9 +146,12 @@ def bivariado_cat_num(df, var_cat, var_num, top_n=5, export_excel_path=None, exp
         >>> bivariado_cat_num(encuestas_df, 'SEGMENTO', 'PREGUNTA_1', 
                              export_json_dir='data')
     """
-    # Filtrar solo las top_n categorías más frecuentes de var_cat
-    top_vals = df[var_cat].value_counts().nlargest(top_n).index
-    df_top = df[df[var_cat].isin(top_vals)]
+    # Filtrar solo las top_n categorías más frecuentes de var_cat, o usar todas si top_n es None
+    if top_n is None:
+        df_top = df.copy()  # Usar todas las categorías
+    else:
+        top_vals = df[var_cat].value_counts().nlargest(top_n).index
+        df_top = df[df[var_cat].isin(top_vals)]
     
     # Imprimir información en consola
     print(f"\n{'='*60}")

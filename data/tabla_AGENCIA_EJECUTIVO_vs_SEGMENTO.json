@@ -1,0 +1,36 @@
+{
+  "Empresas":{
+    "Barranquilla":0.0,
+    "Bogota Centro Internacional":15.22,
+    "Bogota Centro Mayor":0.0,
+    "Bogota El Nogal":0.0,
+    "Bogota Gran Estacion":0.0,
+    "Bogota Plaza Imperial":0.0,
+    "Bogota Principal":23.29,
+    "Bogota Santa Fe":0.0,
+    "Bucaramanga":0.0,
+    "Cali Norte":0.0,
+    "Coltejer Principal":10.24,
+    "Manizales":0.0,
+    "Pereira":0.0,
+    "San Diego":0.0,
+    "Unicentro":0.0
+  },
+  "Personas":{
+    "Barranquilla":100.0,
+    "Bogota Centro Internacional":84.78,
+    "Bogota Centro Mayor":100.0,
+    "Bogota El Nogal":100.0,
+    "Bogota Gran Estacion":100.0,
+    "Bogota Plaza Imperial":100.0,
+    "Bogota Principal":76.71,
+    "Bogota Santa Fe":100.0,
+    "Bucaramanga":100.0,
+    "Cali Norte":100.0,
+    "Coltejer Principal":89.76,
+    "Manizales":100.0,
+    "Pereira":100.0,
+    "San Diego":100.0,
+    "Unicentro":100.0
+  }
+}
