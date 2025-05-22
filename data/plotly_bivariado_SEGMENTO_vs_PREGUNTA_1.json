@@ -1031,7 +1031,14 @@
         5.0
       ],
       "name": "Personas",
-      "boxpoints": "suspectedoutliers"
+      "boxpoints": "suspectedoutliers",
+      "marker": {
+        "size": 3
+      },
+      "line": {
+        "width": 1
+      },
+      "boxmean": true
     },
     {
       "type": "box",
@@ -1075,17 +1082,46 @@
         4.0
       ],
       "name": "Empresas",
-      "boxpoints": "suspectedoutliers"
+      "boxpoints": "suspectedoutliers",
+      "marker": {
+        "size": 3
+      },
+      "line": {
+        "width": 1
+      },
+      "boxmean": true
     }
   ],
   "layout": {
-    "title": "PREGUNTA_1 por SEGMENTO",
+    "title": {
+      "text": "PREGUNTA_1 por SEGMENTO",
+      "font": {
+        "size": 18
+      }
+    },
     "xaxis": {
       "title": "SEGMENTO"
     },
     "yaxis": {
       "title": "PREGUNTA_1"
     },
-    "boxmode": "group"
+    "boxmode": "group",
+    "showlegend": true,
+    "annotations": [
+      {
+        "text": "Prueba: Mann-Whitney U (no paramétrica)<br>p=0.0007",
+        "showarrow": false,
+        "xref": "paper",
+        "yref": "paper",
+        "x": 0,
+        "y": 1,
+        "xanchor": "left",
+        "yanchor": "top",
+        "bgcolor": "rgba(255, 255, 255, 0.8)",
+        "bordercolor": "rgba(0, 0, 0, 0.2)",
+        "borderwidth": 1,
+        "borderpad": 4
+      }
+    ]
   }
 }

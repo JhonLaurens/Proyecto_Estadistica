@@ -1,0 +1,26 @@
+{
+  "prueba_independencia": {
+    "prueba_usada": "Exacta de Fisher",
+    "p_valor": 2.7056582933825803e-69,
+    "interpretacion": "Las variables están relacionadas (p=0.0000)",
+    "requisito_frecuencias_cumplido": false,
+    "odds_ratio": 0.0,
+    "advertencia": "Se utilizó la prueba exacta de Fisher porque no se cumplían requisitos para Chi-cuadrado"
+  },
+  "tamaño_efecto": {
+    "v_cramer": Infinity,
+    "interpretacion": "Tamaño del efecto: V de Cramer = inf, efecto grande"
+  },
+  "resumen_categorias": [
+    {
+      "categoria": "GERENTE DE AGENCIA",
+      "valor_mas_frecuente": "Personas",
+      "porcentaje": 100.0
+    },
+    {
+      "categoria": "GERENTE DE CUENTA EMPRESAS",
+      "valor_mas_frecuente": "Empresas",
+      "porcentaje": 100.0
+    }
+  ]
+}

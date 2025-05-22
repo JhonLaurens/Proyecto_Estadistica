@@ -1,0 +1,42 @@
+{
+  "normalidad_global": {
+    "es_normal": false,
+    "estadistico": 0.675160643022658,
+    "p_valor": 5.81296611698711e-41,
+    "interpretacion": "Los datos no siguen una distribución normal (p=0.0000)"
+  },
+  "normalidad_por_grupos": {
+    "resultados_por_grupo": [
+      {
+        "grupo": "Personas",
+        "es_normal": false,
+        "estadistico": 0.6700651919856214,
+        "p_valor": 1.308919618236762e-40,
+        "interpretacion": "Distribución no normal (p=0.0000)"
+      },
+      {
+        "grupo": "Empresas",
+        "es_normal": false,
+        "estadistico": 0.7944644681392393,
+        "p_valor": 1.0104943408945477e-05,
+        "interpretacion": "Distribución no normal (p=0.0000)"
+      }
+    ]
+  },
+  "homogeneidad_varianzas": {
+    "test_realizado": true,
+    "varianzas_homogeneas": true,
+    "estadistico": 3.258570162063297,
+    "p_valor": 0.0713344504576631,
+    "interpretacion": "Las varianzas son homogéneas (p=0.0713)"
+  },
+  "prueba_diferencia": {
+    "nombre_prueba": "Mann-Whitney U (no paramétrica)",
+    "p_valor": 0.0007278023878020821,
+    "diferencia_significativa": true,
+    "interpretacion": "Hay una diferencia significativa entre los grupos (p=0.0007, efecto pequeño)",
+    "tamaño_efecto": "efecto pequeño",
+    "estadistico_u": 24417.5,
+    "tamaño_efecto_r": 0.1036351019986241
+  }
+}

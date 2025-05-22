@@ -1,5 +1,5 @@
 {
-  "data": [
+  "data_grouped": [
     {
       "x": [
         "Barranquilla",
@@ -77,14 +77,144 @@
       "name": "Personas"
     }
   ],
-  "layout": {
-    "title": "Distribución de SEGMENTO por AGENCIA_EJECUTIVO",
+  "data_stacked": [
+    {
+      "x": [
+        "Barranquilla",
+        "Bogota Centro Internacional",
+        "Bogota Centro Mayor",
+        "Bogota El Nogal",
+        "Bogota Gran Estacion",
+        "Bogota Plaza Imperial",
+        "Bogota Principal",
+        "Bogota Santa Fe",
+        "Bucaramanga",
+        "Cali Norte",
+        "Coltejer Principal",
+        "Manizales",
+        "Pereira",
+        "San Diego",
+        "Unicentro"
+      ],
+      "y": [
+        0.0,
+        15.217391304347828,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        23.28767123287671,
+        0.0,
+        0.0,
+        0.0,
+        10.236220472440944,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "type": "bar",
+      "name": "Empresas"
+    },
+    {
+      "x": [
+        "Barranquilla",
+        "Bogota Centro Internacional",
+        "Bogota Centro Mayor",
+        "Bogota El Nogal",
+        "Bogota Gran Estacion",
+        "Bogota Plaza Imperial",
+        "Bogota Principal",
+        "Bogota Santa Fe",
+        "Bucaramanga",
+        "Cali Norte",
+        "Coltejer Principal",
+        "Manizales",
+        "Pereira",
+        "San Diego",
+        "Unicentro"
+      ],
+      "y": [
+        100.0,
+        84.78260869565217,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        76.71232876712328,
+        100.0,
+        100.0,
+        100.0,
+        89.76377952755905,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "type": "bar",
+      "name": "Personas"
+    }
+  ],
+  "layout_grouped": {
+    "title": {
+      "text": "Distribución de SEGMENTO por AGENCIA_EJECUTIVO",
+      "font": {
+        "size": 18
+      }
+    },
     "xaxis": {
       "title": "AGENCIA_EJECUTIVO"
     },
     "yaxis": {
       "title": "Porcentaje (%)"
     },
-    "barmode": "group"
+    "barmode": "group",
+    "annotations": [
+      {
+        "text": "Prueba: Chi-cuadrado (con advertencia)<br>p = 0.0000",
+        "showarrow": false,
+        "xref": "paper",
+        "yref": "paper",
+        "x": 0,
+        "y": 1,
+        "xanchor": "left",
+        "yanchor": "top",
+        "bgcolor": "rgba(255, 255, 255, 0.8)",
+        "bordercolor": "rgba(0, 0, 0, 0.2)",
+        "borderwidth": 1,
+        "borderpad": 4
+      }
+    ]
+  },
+  "layout_stacked": {
+    "title": {
+      "text": "Composición proporcional de SEGMENTO por AGENCIA_EJECUTIVO",
+      "font": {
+        "size": 18
+      }
+    },
+    "xaxis": {
+      "title": "AGENCIA_EJECUTIVO"
+    },
+    "yaxis": {
+      "title": "Porcentaje (%)"
+    },
+    "barmode": "stack",
+    "annotations": [
+      {
+        "text": "V de Cramer = 0.377<br>(V de Cramer = 0.377, efecto moderado)",
+        "showarrow": false,
+        "xref": "paper",
+        "yref": "paper",
+        "x": 0,
+        "y": 1,
+        "xanchor": "left",
+        "yanchor": "top",
+        "bgcolor": "rgba(255, 255, 255, 0.8)",
+        "bordercolor": "rgba(0, 0, 0, 0.2)",
+        "borderwidth": 1,
+        "borderpad": 4
+      }
+    ]
   }
 }

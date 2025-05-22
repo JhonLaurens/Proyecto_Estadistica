@@ -1,0 +1,37 @@
+{
+  "Barranquilla":{
+    "F":14,
+    "M":8,
+    "No aplica":0
+  },
+  "Bogota D.C.":{
+    "F":292,
+    "M":235,
+    "No aplica":24
+  },
+  "Bucaramanga":{
+    "F":38,
+    "M":19,
+    "No aplica":0
+  },
+  "Cali Norte":{
+    "F":12,
+    "M":16,
+    "No aplica":0
+  },
+  "Manizales":{
+    "F":48,
+    "M":36,
+    "No aplica":0
+  },
+  "Medellin":{
+    "F":184,
+    "M":107,
+    "No aplica":13
+  },
+  "Pereira":{
+    "F":9,
+    "M":8,
+    "No aplica":0
+  }
+}

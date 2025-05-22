@@ -1,5 +1,5 @@
 {
-  "data": [
+  "data_grouped": [
     {
       "x": [
         1,
@@ -45,14 +45,112 @@
       "name": "Personas"
     }
   ],
-  "layout": {
-    "title": "Distribución de SEGMENTO por ESTRATO",
+  "data_stacked": [
+    {
+      "x": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "y": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        100.0
+      ],
+      "type": "bar",
+      "name": "Empresas"
+    },
+    {
+      "x": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "y": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        0.0
+      ],
+      "type": "bar",
+      "name": "Personas"
+    }
+  ],
+  "layout_grouped": {
+    "title": {
+      "text": "Distribución de SEGMENTO por ESTRATO",
+      "font": {
+        "size": 18
+      }
+    },
     "xaxis": {
       "title": "ESTRATO"
     },
     "yaxis": {
       "title": "Porcentaje (%)"
     },
-    "barmode": "group"
+    "barmode": "group",
+    "annotations": [
+      {
+        "text": "Prueba: Chi-cuadrado (con advertencia)<br>p = 0.0000",
+        "showarrow": false,
+        "xref": "paper",
+        "yref": "paper",
+        "x": 0,
+        "y": 1,
+        "xanchor": "left",
+        "yanchor": "top",
+        "bgcolor": "rgba(255, 255, 255, 0.8)",
+        "bordercolor": "rgba(0, 0, 0, 0.2)",
+        "borderwidth": 1,
+        "borderpad": 4
+      }
+    ]
+  },
+  "layout_stacked": {
+    "title": {
+      "text": "Composición proporcional de SEGMENTO por ESTRATO",
+      "font": {
+        "size": 18
+      }
+    },
+    "xaxis": {
+      "title": "ESTRATO"
+    },
+    "yaxis": {
+      "title": "Porcentaje (%)"
+    },
+    "barmode": "stack",
+    "annotations": [
+      {
+        "text": "V de Cramer = 1.000<br>(V de Cramer = 1.000, efecto grande)",
+        "showarrow": false,
+        "xref": "paper",
+        "yref": "paper",
+        "x": 0,
+        "y": 1,
+        "xanchor": "left",
+        "yanchor": "top",
+        "bgcolor": "rgba(255, 255, 255, 0.8)",
+        "bordercolor": "rgba(0, 0, 0, 0.2)",
+        "borderwidth": 1,
+        "borderpad": 4
+      }
+    ]
   }
 }

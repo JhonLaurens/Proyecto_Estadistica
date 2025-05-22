@@ -1,0 +1,52 @@
+{
+  "prueba_independencia": {
+    "prueba_usada": "Chi-cuadrado (con advertencia)",
+    "p_valor": 0.15588014728105928,
+    "interpretacion": "Las variables son independientes (p=0.1559)",
+    "requisito_frecuencias_cumplido": false,
+    "estadistico": 9.32944962884845,
+    "grados_libertad": 6,
+    "advertencia": "Algunas frecuencias esperadas son menores a 5. Los resultados deben interpretarse con precaución."
+  },
+  "tamaño_efecto": {
+    "v_cramer": 0.09368312731343494,
+    "interpretacion": "Tamaño del efecto: V de Cramer = 0.094, efecto muy pequeño"
+  },
+  "resumen_categorias": [
+    {
+      "categoria": "Barranquilla",
+      "valor_mas_frecuente": "Personas",
+      "porcentaje": 100.0
+    },
+    {
+      "categoria": "Bogota D.C.",
+      "valor_mas_frecuente": "Personas",
+      "porcentaje": 95.6442831215971
+    },
+    {
+      "categoria": "Bucaramanga",
+      "valor_mas_frecuente": "Personas",
+      "porcentaje": 100.0
+    },
+    {
+      "categoria": "Cali Norte",
+      "valor_mas_frecuente": "Personas",
+      "porcentaje": 100.0
+    },
+    {
+      "categoria": "Manizales",
+      "valor_mas_frecuente": "Personas",
+      "porcentaje": 100.0
+    },
+    {
+      "categoria": "Medellin",
+      "valor_mas_frecuente": "Personas",
+      "porcentaje": 95.72368421052632
+    },
+    {
+      "categoria": "Pereira",
+      "valor_mas_frecuente": "Personas",
+      "porcentaje": 100.0
+    }
+  ]
+}

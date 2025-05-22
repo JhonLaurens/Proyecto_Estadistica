@@ -1,5 +1,5 @@
 {
-  "data": [
+  "data_grouped": [
     {
       "x": [
         "GERENTE DE AGENCIA",
@@ -25,14 +25,92 @@
       "name": "Personas"
     }
   ],
-  "layout": {
-    "title": "Distribución de SEGMENTO por TIPO_EJECUTIVO",
+  "data_stacked": [
+    {
+      "x": [
+        "GERENTE DE AGENCIA",
+        "GERENTE DE CUENTA EMPRESAS"
+      ],
+      "y": [
+        0.0,
+        100.0
+      ],
+      "type": "bar",
+      "name": "Empresas"
+    },
+    {
+      "x": [
+        "GERENTE DE AGENCIA",
+        "GERENTE DE CUENTA EMPRESAS"
+      ],
+      "y": [
+        100.0,
+        0.0
+      ],
+      "type": "bar",
+      "name": "Personas"
+    }
+  ],
+  "layout_grouped": {
+    "title": {
+      "text": "Distribución de SEGMENTO por TIPO_EJECUTIVO",
+      "font": {
+        "size": 18
+      }
+    },
     "xaxis": {
       "title": "TIPO_EJECUTIVO"
     },
     "yaxis": {
       "title": "Porcentaje (%)"
     },
-    "barmode": "group"
+    "barmode": "group",
+    "annotations": [
+      {
+        "text": "Prueba: Exacta de Fisher<br>p = 0.0000",
+        "showarrow": false,
+        "xref": "paper",
+        "yref": "paper",
+        "x": 0,
+        "y": 1,
+        "xanchor": "left",
+        "yanchor": "top",
+        "bgcolor": "rgba(255, 255, 255, 0.8)",
+        "bordercolor": "rgba(0, 0, 0, 0.2)",
+        "borderwidth": 1,
+        "borderpad": 4
+      }
+    ]
+  },
+  "layout_stacked": {
+    "title": {
+      "text": "Composición proporcional de SEGMENTO por TIPO_EJECUTIVO",
+      "font": {
+        "size": 18
+      }
+    },
+    "xaxis": {
+      "title": "TIPO_EJECUTIVO"
+    },
+    "yaxis": {
+      "title": "Porcentaje (%)"
+    },
+    "barmode": "stack",
+    "annotations": [
+      {
+        "text": "V de Cramer = inf<br>(V de Cramer = inf, efecto grande)",
+        "showarrow": false,
+        "xref": "paper",
+        "yref": "paper",
+        "x": 0,
+        "y": 1,
+        "xanchor": "left",
+        "yanchor": "top",
+        "bgcolor": "rgba(255, 255, 255, 0.8)",
+        "bordercolor": "rgba(0, 0, 0, 0.2)",
+        "borderwidth": 1,
+        "borderpad": 4
+      }
+    ]
   }
 }

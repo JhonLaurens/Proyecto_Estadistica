@@ -1,0 +1,147 @@
+{
+  "datos_categorias": [
+    {
+      "categoria": "5",
+      "media": 4.468208092485549,
+      "mediana": 5.0,
+      "q1": 4.0,
+      "q3": 5.0,
+      "min": 1.0,
+      "max": 5.0,
+      "n": 173,
+      "ic_inf": 4.331337721340395,
+      "ic_sup": 4.6050784636307025,
+      "error_std": 0.06934175378521099
+    },
+    {
+      "categoria": "6",
+      "media": 4.431372549019608,
+      "mediana": 5.0,
+      "q1": 4.0,
+      "q3": 5.0,
+      "min": 1.0,
+      "max": 5.0,
+      "n": 102,
+      "ic_inf": 4.244910914028019,
+      "ic_sup": 4.617834184011198,
+      "error_std": 0.09399542312964103
+    },
+    {
+      "categoria": "4",
+      "media": 4.426174496644295,
+      "mediana": 5.0,
+      "q1": 4.0,
+      "q3": 5.0,
+      "min": 1.0,
+      "max": 5.0,
+      "n": 298,
+      "ic_inf": 4.323081952198863,
+      "ic_sup": 4.529267041089727,
+      "error_std": 0.05238486151744608
+    },
+    {
+      "categoria": "3",
+      "media": 4.382183908045977,
+      "mediana": 5.0,
+      "q1": 4.0,
+      "q3": 5.0,
+      "min": 1.0,
+      "max": 5.0,
+      "n": 348,
+      "ic_inf": 4.288808846673866,
+      "ic_sup": 4.4755589694180875,
+      "error_std": 0.047475046683001
+    },
+    {
+      "categoria": "2",
+      "media": 4.336734693877551,
+      "mediana": 5.0,
+      "q1": 4.0,
+      "q3": 5.0,
+      "min": 1.0,
+      "max": 5.0,
+      "n": 98,
+      "ic_inf": 4.143737361844497,
+      "ic_sup": 4.529732025910604,
+      "error_std": 0.09724143567818269
+    },
+    {
+      "categoria": "1",
+      "media": 4.285714285714286,
+      "mediana": 4.0,
+      "q1": 4.0,
+      "q3": 5.0,
+      "min": 3.0,
+      "max": 5.0,
+      "n": 7,
+      "ic_inf": 3.58659661395858,
+      "ic_sup": 4.984831957469991,
+      "error_std": 0.2857142857142857
+    },
+    {
+      "categoria": "7",
+      "media": 3.8378378378378377,
+      "mediana": 4.0,
+      "q1": 3.0,
+      "q3": 5.0,
+      "min": 1.0,
+      "max": 5.0,
+      "n": 37,
+      "ic_inf": 3.418198364190015,
+      "ic_sup": 4.25747731148566,
+      "error_std": 0.20691322662803338
+    }
+  ],
+  "estadisticas": {
+    "prueba_utilizada": "Kruskal-Wallis H (no paramétrica)",
+    "p_valor": 0.010183708043679804,
+    "diferencia_significativa": true,
+    "tamaño_efecto": {
+      "tamaño_efecto_eta_cuadrado": 0.010194865425969845,
+      "interpretacion_efecto": "efecto pequeño"
+    },
+    "potencia": null
+  },
+  "significancia_entre_grupos": [
+    {
+      "grupo1": "4",
+      "grupo2": "7",
+      "p_valor": 0.0007365060282870097,
+      "diferencia": 0,
+      "efecto": "efecto pequeño"
+    },
+    {
+      "grupo1": "6",
+      "grupo2": "7",
+      "p_valor": 0.0019329737243636467,
+      "diferencia": 0,
+      "efecto": "efecto pequeño"
+    },
+    {
+      "grupo1": "5",
+      "grupo2": "7",
+      "p_valor": 0.00029796893184144723,
+      "diferencia": 0,
+      "efecto": "efecto pequeño"
+    }
+  ],
+  "layout_barras": {
+    "title": "Medias de PREGUNTA_1 por ESTRATO con IC 95%",
+    "xaxis": {
+      "title": "ESTRATO"
+    },
+    "yaxis": {
+      "title": "PREGUNTA_1"
+    },
+    "showlegend": true
+  },
+  "layout_boxplot": {
+    "title": "Distribución de PREGUNTA_1 por ESTRATO",
+    "xaxis": {
+      "title": "ESTRATO"
+    },
+    "yaxis": {
+      "title": "PREGUNTA_1"
+    }
+  }
+}

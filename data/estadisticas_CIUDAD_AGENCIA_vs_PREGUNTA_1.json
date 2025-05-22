@@ -1,0 +1,271 @@
+{
+  "normalidad_global": {
+    "es_normal": false,
+    "estadistico": 0.675160643022658,
+    "p_valor": 5.81296611698711e-41,
+    "interpretacion": "Los datos no siguen una distribución normal (p=0.0000)"
+  },
+  "normalidad_por_grupos": {
+    "resultados_por_grupo": [
+      {
+        "grupo": "Barranquilla",
+        "es_normal": false,
+        "estadistico": 0.5891456180474036,
+        "p_valor": 1.0164676208646658e-06,
+        "interpretacion": "Distribución no normal (p=0.0000)"
+      },
+      {
+        "grupo": "Manizales",
+        "es_normal": false,
+        "estadistico": 0.6163978109920452,
+        "p_valor": 1.7422803760583793e-13,
+        "interpretacion": "Distribución no normal (p=0.0000)"
+      },
+      {
+        "grupo": "Medellin",
+        "es_normal": false,
+        "estadistico": 0.6683994653002114,
+        "p_valor": 5.728368204173365e-24,
+        "interpretacion": "Distribución no normal (p=0.0000)"
+      },
+      {
+        "grupo": "Bogota D.C.",
+        "es_normal": false,
+        "estadistico": 0.7172394187555633,
+        "p_valor": 1.8424982068805662e-29,
+        "interpretacion": "Distribución no normal (p=0.0000)"
+      },
+      {
+        "grupo": "Cali Norte",
+        "es_normal": false,
+        "estadistico": 0.47654677357863073,
+        "p_valor": 6.603142316102787e-09,
+        "interpretacion": "Distribución no normal (p=0.0000)"
+      },
+      {
+        "grupo": "Bucaramanga",
+        "es_normal": false,
+        "estadistico": 0.5026941995635412,
+        "p_valor": 1.3034743784777989e-12,
+        "interpretacion": "Distribución no normal (p=0.0000)"
+      },
+      {
+        "grupo": "Pereira",
+        "es_normal": false,
+        "estadistico": 0.3852513203101541,
+        "p_valor": 1.5863208512893727e-07,
+        "interpretacion": "Distribución no normal (p=0.0000)"
+      }
+    ]
+  },
+  "homogeneidad_varianzas": {
+    "test_realizado": true,
+    "varianzas_homogeneas": false,
+    "estadistico": 3.5949968939950216,
+    "p_valor": 0.0015588923258831706,
+    "interpretacion": "Las varianzas son heterogéneas (p=0.0016)"
+  },
+  "prueba_diferencia": {
+    "nombre_prueba": "Kruskal-Wallis H (no paramétrica)",
+    "p_valor": 3.0510977891419696e-05,
+    "diferencia_significativa": true,
+    "interpretacion": "Hay una diferencia significativa entre los grupos (p=0.0000, efecto pequeño)",
+    "tamaño_efecto": "efecto pequeño",
+    "estadistico_h": 30.578042566830593,
+    "tamaño_efecto_eta_cuadrado": 0.02327466152161988,
+    "analisis_posthoc": {
+      "metodo": "Mann-Whitney con corrección de Bonferroni",
+      "comparaciones": [
+        {
+          "grupo1": "Barranquilla",
+          "grupo2": "Manizales",
+          "p_valor": 0.7123477777933735,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Barranquilla",
+          "grupo2": "Medellin",
+          "p_valor": 0.33012604099081333,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Barranquilla",
+          "grupo2": "Bogota D.C.",
+          "p_valor": 0.07754431607350488,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Barranquilla",
+          "grupo2": "Cali Norte",
+          "p_valor": 0.8085169314529603,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Barranquilla",
+          "grupo2": "Bucaramanga",
+          "p_valor": 0.7810930985012532,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Barranquilla",
+          "grupo2": "Pereira",
+          "p_valor": 0.391999225388982,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Manizales",
+          "grupo2": "Medellin",
+          "p_valor": 0.27873956470374306,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Manizales",
+          "grupo2": "Bogota D.C.",
+          "p_valor": 0.007679256962783378,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Manizales",
+          "grupo2": "Cali Norte",
+          "p_valor": 0.4455993478750985,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Manizales",
+          "grupo2": "Bucaramanga",
+          "p_valor": 0.34705816991156757,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Manizales",
+          "grupo2": "Pereira",
+          "p_valor": 0.17058133697436373,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Medellin",
+          "grupo2": "Bogota D.C.",
+          "p_valor": 0.007948823623806481,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Medellin",
+          "grupo2": "Cali Norte",
+          "p_valor": 0.13637590602570915,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Medellin",
+          "grupo2": "Bucaramanga",
+          "p_valor": 0.0545186540727862,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Medellin",
+          "grupo2": "Pereira",
+          "p_valor": 0.049849456463985496,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Bogota D.C.",
+          "grupo2": "Cali Norte",
+          "p_valor": 0.016968460706747644,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Bogota D.C.",
+          "grupo2": "Bucaramanga",
+          "p_valor": 0.001877973294504138,
+          "diferencia_medias": 0.0,
+          "significativa": true,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Bogota D.C.",
+          "grupo2": "Pereira",
+          "p_valor": 0.007664456547223082,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Cali Norte",
+          "grupo2": "Bucaramanga",
+          "p_valor": 0.959749071280272,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Cali Norte",
+          "grupo2": "Pereira",
+          "p_valor": 0.4649239020741285,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Bucaramanga",
+          "grupo2": "Pereira",
+          "p_valor": 0.45188097503148794,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        }
+      ]
+    }
+  }
+}

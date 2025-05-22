@@ -1,0 +1,60 @@
+{
+  "datos_categorias": [
+    {
+      "categoria": "GERENTE DE AGENCIA",
+      "media": 4.409356725146199,
+      "mediana": 5.0,
+      "q1": 4.0,
+      "q3": 5.0,
+      "min": 1.0,
+      "max": 5.0,
+      "n": 1026,
+      "ic_inf": 4.353764394478435,
+      "ic_sup": 4.464949055813963,
+      "error_std": 0.028330462496265654
+    },
+    {
+      "categoria": "GERENTE DE CUENTA EMPRESAS",
+      "media": 3.8378378378378377,
+      "mediana": 4.0,
+      "q1": 3.0,
+      "q3": 5.0,
+      "min": 1.0,
+      "max": 5.0,
+      "n": 37,
+      "ic_inf": 3.418198364190015,
+      "ic_sup": 4.25747731148566,
+      "error_std": 0.20691322662803338
+    }
+  ],
+  "estadisticas": {
+    "prueba_utilizada": "Mann-Whitney U (no paramétrica)",
+    "p_valor": 0.0007278023878020821,
+    "diferencia_significativa": true,
+    "tamaño_efecto": {
+      "tamaño_efecto_r": 0.1036351019986241,
+      "interpretacion_efecto": "efecto pequeño"
+    },
+    "potencia": 0.8749510844594878
+  },
+  "significancia_entre_grupos": [],
+  "layout_barras": {
+    "title": "Medias de PREGUNTA_1 por TIPO_EJECUTIVO con IC 95%",
+    "xaxis": {
+      "title": "TIPO_EJECUTIVO"
+    },
+    "yaxis": {
+      "title": "PREGUNTA_1"
+    },
+    "showlegend": true
+  },
+  "layout_boxplot": {
+    "title": "Distribución de PREGUNTA_1 por TIPO_EJECUTIVO",
+    "xaxis": {
+      "title": "TIPO_EJECUTIVO"
+    },
+    "yaxis": {
+      "title": "PREGUNTA_1"
+    }
+  }
+}

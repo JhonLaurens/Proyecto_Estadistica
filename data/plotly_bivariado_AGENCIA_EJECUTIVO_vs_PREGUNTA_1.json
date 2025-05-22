@@ -27,7 +27,14 @@
         5.0
       ],
       "name": "Barranquilla",
-      "boxpoints": "suspectedoutliers"
+      "boxpoints": "suspectedoutliers",
+      "marker": {
+        "size": 3
+      },
+      "line": {
+        "width": 1
+      },
+      "boxmean": true
     },
     {
       "type": "box",
@@ -118,7 +125,14 @@
         2.0
       ],
       "name": "Manizales",
-      "boxpoints": "suspectedoutliers"
+      "boxpoints": "suspectedoutliers",
+      "marker": {
+        "size": 3
+      },
+      "line": {
+        "width": 1
+      },
+      "boxmean": true
     },
     {
       "type": "box",
@@ -183,7 +197,14 @@
         5.0
       ],
       "name": "San Diego",
-      "boxpoints": "suspectedoutliers"
+      "boxpoints": "suspectedoutliers",
+      "marker": {
+        "size": 3
+      },
+      "line": {
+        "width": 1
+      },
+      "boxmean": true
     },
     {
       "type": "box",
@@ -317,7 +338,14 @@
         5.0
       ],
       "name": "Coltejer Principal",
-      "boxpoints": "suspectedoutliers"
+      "boxpoints": "suspectedoutliers",
+      "marker": {
+        "size": 3
+      },
+      "line": {
+        "width": 1
+      },
+      "boxmean": true
     },
     {
       "type": "box",
@@ -443,7 +471,14 @@
         3.0
       ],
       "name": "Unicentro",
-      "boxpoints": "suspectedoutliers"
+      "boxpoints": "suspectedoutliers",
+      "marker": {
+        "size": 3
+      },
+      "line": {
+        "width": 1
+      },
+      "boxmean": true
     },
     {
       "type": "box",
@@ -536,7 +571,14 @@
         5.0
       ],
       "name": "Bogota Plaza Imperial",
-      "boxpoints": "suspectedoutliers"
+      "boxpoints": "suspectedoutliers",
+      "marker": {
+        "size": 3
+      },
+      "line": {
+        "width": 1
+      },
+      "boxmean": true
     },
     {
       "type": "box",
@@ -701,7 +743,14 @@
         5.0
       ],
       "name": "Bogota El Nogal",
-      "boxpoints": "suspectedoutliers"
+      "boxpoints": "suspectedoutliers",
+      "marker": {
+        "size": 3
+      },
+      "line": {
+        "width": 1
+      },
+      "boxmean": true
     },
     {
       "type": "box",
@@ -736,7 +785,14 @@
         5.0
       ],
       "name": "Cali Norte",
-      "boxpoints": "suspectedoutliers"
+      "boxpoints": "suspectedoutliers",
+      "marker": {
+        "size": 3
+      },
+      "line": {
+        "width": 1
+      },
+      "boxmean": true
     },
     {
       "type": "box",
@@ -816,7 +872,14 @@
         5.0
       ],
       "name": "Bogota Centro Mayor",
-      "boxpoints": "suspectedoutliers"
+      "boxpoints": "suspectedoutliers",
+      "marker": {
+        "size": 3
+      },
+      "line": {
+        "width": 1
+      },
+      "boxmean": true
     },
     {
       "type": "box",
@@ -880,7 +943,14 @@
         5.0
       ],
       "name": "Bogota Santa Fe",
-      "boxpoints": "suspectedoutliers"
+      "boxpoints": "suspectedoutliers",
+      "marker": {
+        "size": 3
+      },
+      "line": {
+        "width": 1
+      },
+      "boxmean": true
     },
     {
       "type": "box",
@@ -945,7 +1015,14 @@
         5.0
       ],
       "name": "Bogota Gran Estacion",
-      "boxpoints": "suspectedoutliers"
+      "boxpoints": "suspectedoutliers",
+      "marker": {
+        "size": 3
+      },
+      "line": {
+        "width": 1
+      },
+      "boxmean": true
     },
     {
       "type": "box",
@@ -1009,7 +1086,14 @@
         5.0
       ],
       "name": "Bucaramanga",
-      "boxpoints": "suspectedoutliers"
+      "boxpoints": "suspectedoutliers",
+      "marker": {
+        "size": 3
+      },
+      "line": {
+        "width": 1
+      },
+      "boxmean": true
     },
     {
       "type": "box",
@@ -1089,7 +1173,14 @@
         4.0
       ],
       "name": "Bogota Principal",
-      "boxpoints": "suspectedoutliers"
+      "boxpoints": "suspectedoutliers",
+      "marker": {
+        "size": 3
+      },
+      "line": {
+        "width": 1
+      },
+      "boxmean": true
     },
     {
       "type": "box",
@@ -1113,7 +1204,14 @@
         5.0
       ],
       "name": "Pereira",
-      "boxpoints": "suspectedoutliers"
+      "boxpoints": "suspectedoutliers",
+      "marker": {
+        "size": 3
+      },
+      "line": {
+        "width": 1
+      },
+      "boxmean": true
     },
     {
       "type": "box",
@@ -1166,17 +1264,46 @@
         5.0
       ],
       "name": "Bogota Centro Internacional",
-      "boxpoints": "suspectedoutliers"
+      "boxpoints": "suspectedoutliers",
+      "marker": {
+        "size": 3
+      },
+      "line": {
+        "width": 1
+      },
+      "boxmean": true
     }
   ],
   "layout": {
-    "title": "PREGUNTA_1 por AGENCIA_EJECUTIVO",
+    "title": {
+      "text": "PREGUNTA_1 por AGENCIA_EJECUTIVO",
+      "font": {
+        "size": 18
+      }
+    },
     "xaxis": {
       "title": "AGENCIA_EJECUTIVO"
     },
     "yaxis": {
       "title": "PREGUNTA_1"
     },
-    "boxmode": "group"
+    "boxmode": "group",
+    "showlegend": true,
+    "annotations": [
+      {
+        "text": "Prueba: Kruskal-Wallis H (no paramétrica)<br>p=0.0001",
+        "showarrow": false,
+        "xref": "paper",
+        "yref": "paper",
+        "x": 0,
+        "y": 1,
+        "xanchor": "left",
+        "yanchor": "top",
+        "bgcolor": "rgba(255, 255, 255, 0.8)",
+        "bordercolor": "rgba(0, 0, 0, 0.2)",
+        "borderwidth": 1,
+        "borderpad": 4
+      }
+    ]
   }
 }

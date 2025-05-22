@@ -1,0 +1,32 @@
+{
+  "prueba_independencia": {
+    "prueba_usada": "Chi-cuadrado (con advertencia)",
+    "p_valor": 0.08689946591272285,
+    "interpretacion": "Las variables son independientes (p=0.0869)",
+    "requisito_frecuencias_cumplido": false,
+    "estadistico": 19.06804664208487,
+    "grados_libertad": 12,
+    "advertencia": "Algunas frecuencias esperadas son menores a 5. Los resultados deben interpretarse con precaución."
+  },
+  "tamaño_efecto": {
+    "v_cramer": 0.09470468691888974,
+    "interpretacion": "Tamaño del efecto: V de Cramer = 0.095, efecto muy pequeño"
+  },
+  "resumen_categorias": [
+    {
+      "categoria": "F",
+      "valor_mas_frecuente": "Bogota D.C.",
+      "porcentaje": 48.91122278056951
+    },
+    {
+      "categoria": "M",
+      "valor_mas_frecuente": "Bogota D.C.",
+      "porcentaje": 54.77855477855478
+    },
+    {
+      "categoria": "No aplica",
+      "valor_mas_frecuente": "Bogota D.C.",
+      "porcentaje": 64.86486486486487
+    }
+  ]
+}

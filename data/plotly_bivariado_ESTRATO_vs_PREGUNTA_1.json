@@ -303,7 +303,14 @@
         2.0
       ],
       "name": "4",
-      "boxpoints": "suspectedoutliers"
+      "boxpoints": "suspectedoutliers",
+      "marker": {
+        "size": 3
+      },
+      "line": {
+        "width": 1
+      },
+      "boxmean": true
     },
     {
       "type": "box",
@@ -412,7 +419,14 @@
         3.0
       ],
       "name": "6",
-      "boxpoints": "suspectedoutliers"
+      "boxpoints": "suspectedoutliers",
+      "marker": {
+        "size": 3
+      },
+      "line": {
+        "width": 1
+      },
+      "boxmean": true
     },
     {
       "type": "box",
@@ -767,7 +781,14 @@
         5.0
       ],
       "name": "3",
-      "boxpoints": "suspectedoutliers"
+      "boxpoints": "suspectedoutliers",
+      "marker": {
+        "size": 3
+      },
+      "line": {
+        "width": 1
+      },
+      "boxmean": true
     },
     {
       "type": "box",
@@ -947,7 +968,14 @@
         5.0
       ],
       "name": "5",
-      "boxpoints": "suspectedoutliers"
+      "boxpoints": "suspectedoutliers",
+      "marker": {
+        "size": 3
+      },
+      "line": {
+        "width": 1
+      },
+      "boxmean": true
     },
     {
       "type": "box",
@@ -1052,7 +1080,14 @@
         5.0
       ],
       "name": "2",
-      "boxpoints": "suspectedoutliers"
+      "boxpoints": "suspectedoutliers",
+      "marker": {
+        "size": 3
+      },
+      "line": {
+        "width": 1
+      },
+      "boxmean": true
     },
     {
       "type": "box",
@@ -1066,7 +1101,14 @@
         3.0
       ],
       "name": "1",
-      "boxpoints": "suspectedoutliers"
+      "boxpoints": "suspectedoutliers",
+      "marker": {
+        "size": 3
+      },
+      "line": {
+        "width": 1
+      },
+      "boxmean": true
     },
     {
       "type": "box",
@@ -1110,17 +1152,46 @@
         4.0
       ],
       "name": "7",
-      "boxpoints": "suspectedoutliers"
+      "boxpoints": "suspectedoutliers",
+      "marker": {
+        "size": 3
+      },
+      "line": {
+        "width": 1
+      },
+      "boxmean": true
     }
   ],
   "layout": {
-    "title": "PREGUNTA_1 por ESTRATO",
+    "title": {
+      "text": "PREGUNTA_1 por ESTRATO",
+      "font": {
+        "size": 18
+      }
+    },
     "xaxis": {
       "title": "ESTRATO"
     },
     "yaxis": {
       "title": "PREGUNTA_1"
     },
-    "boxmode": "group"
+    "boxmode": "group",
+    "showlegend": true,
+    "annotations": [
+      {
+        "text": "Prueba: Kruskal-Wallis H (no paramétrica)<br>p=0.0102",
+        "showarrow": false,
+        "xref": "paper",
+        "yref": "paper",
+        "x": 0,
+        "y": 1,
+        "xanchor": "left",
+        "yanchor": "top",
+        "bgcolor": "rgba(255, 255, 255, 0.8)",
+        "bordercolor": "rgba(0, 0, 0, 0.2)",
+        "borderwidth": 1,
+        "borderpad": 4
+      }
+    ]
   }
 }

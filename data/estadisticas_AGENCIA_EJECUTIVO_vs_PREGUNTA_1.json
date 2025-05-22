@@ -1,0 +1,1083 @@
+{
+  "normalidad_global": {
+    "es_normal": false,
+    "estadistico": 0.675160643022658,
+    "p_valor": 5.81296611698711e-41,
+    "interpretacion": "Los datos no siguen una distribución normal (p=0.0000)"
+  },
+  "normalidad_por_grupos": {
+    "resultados_por_grupo": [
+      {
+        "grupo": "Barranquilla",
+        "es_normal": false,
+        "estadistico": 0.5891456180474036,
+        "p_valor": 1.0164676208646658e-06,
+        "interpretacion": "Distribución no normal (p=0.0000)"
+      },
+      {
+        "grupo": "Manizales",
+        "es_normal": false,
+        "estadistico": 0.6163978109920452,
+        "p_valor": 1.7422803760583793e-13,
+        "interpretacion": "Distribución no normal (p=0.0000)"
+      },
+      {
+        "grupo": "San Diego",
+        "es_normal": false,
+        "estadistico": 0.726006494986835,
+        "p_valor": 4.409493636106342e-09,
+        "interpretacion": "Distribución no normal (p=0.0000)"
+      },
+      {
+        "grupo": "Coltejer Principal",
+        "es_normal": false,
+        "estadistico": 0.6579540573074039,
+        "p_valor": 8.641975151530482e-16,
+        "interpretacion": "Distribución no normal (p=0.0000)"
+      },
+      {
+        "grupo": "Unicentro",
+        "es_normal": false,
+        "estadistico": 0.6403005919024971,
+        "p_valor": 1.1769187821944286e-15,
+        "interpretacion": "Distribución no normal (p=0.0000)"
+      },
+      {
+        "grupo": "Bogota Plaza Imperial",
+        "es_normal": false,
+        "estadistico": 0.6977462582175378,
+        "p_valor": 5.155163335329429e-12,
+        "interpretacion": "Distribución no normal (p=0.0000)"
+      },
+      {
+        "grupo": "Bogota El Nogal",
+        "es_normal": false,
+        "estadistico": 0.7687463447687151,
+        "p_valor": 1.6534132530394445e-14,
+        "interpretacion": "Distribución no normal (p=0.0000)"
+      },
+      {
+        "grupo": "Cali Norte",
+        "es_normal": false,
+        "estadistico": 0.47654677357863073,
+        "p_valor": 6.603142316102787e-09,
+        "interpretacion": "Distribución no normal (p=0.0000)"
+      },
+      {
+        "grupo": "Bogota Centro Mayor",
+        "es_normal": false,
+        "estadistico": 0.6886523348029707,
+        "p_valor": 3.7215705922102396e-11,
+        "interpretacion": "Distribución no normal (p=0.0000)"
+      },
+      {
+        "grupo": "Bogota Santa Fe",
+        "es_normal": false,
+        "estadistico": 0.6186177439017073,
+        "p_valor": 6.504525444567673e-11,
+        "interpretacion": "Distribución no normal (p=0.0000)"
+      },
+      {
+        "grupo": "Bogota Gran Estacion",
+        "es_normal": false,
+        "estadistico": 0.7503892875653564,
+        "p_valor": 1.4160744534244e-08,
+        "interpretacion": "Distribución no normal (p=0.0000)"
+      },
+      {
+        "grupo": "Bucaramanga",
+        "es_normal": false,
+        "estadistico": 0.5026941995635412,
+        "p_valor": 1.3034743784777989e-12,
+        "interpretacion": "Distribución no normal (p=0.0000)"
+      },
+      {
+        "grupo": "Bogota Principal",
+        "es_normal": false,
+        "estadistico": 0.6930987319609826,
+        "p_valor": 4.5833916021160343e-11,
+        "interpretacion": "Distribución no normal (p=0.0000)"
+      },
+      {
+        "grupo": "Pereira",
+        "es_normal": false,
+        "estadistico": 0.3852513203101541,
+        "p_valor": 1.5863208512893727e-07,
+        "interpretacion": "Distribución no normal (p=0.0000)"
+      },
+      {
+        "grupo": "Bogota Centro Internacional",
+        "es_normal": false,
+        "estadistico": 0.7155440150663795,
+        "p_valor": 4.043595045149342e-08,
+        "interpretacion": "Distribución no normal (p=0.0000)"
+      }
+    ]
+  },
+  "homogeneidad_varianzas": {
+    "test_realizado": true,
+    "varianzas_homogeneas": false,
+    "estadistico": 3.4477761725298284,
+    "p_valor": 1.6149606169140657e-05,
+    "interpretacion": "Las varianzas son heterogéneas (p=0.0000)"
+  },
+  "prueba_diferencia": {
+    "nombre_prueba": "Kruskal-Wallis H (no paramétrica)",
+    "p_valor": 5.80994067694129e-05,
+    "diferencia_significativa": true,
+    "interpretacion": "Hay una diferencia significativa entre los grupos (p=0.0001, efecto pequeño)",
+    "tamaño_efecto": "efecto pequeño",
+    "estadistico_h": 44.050476285803846,
+    "tamaño_efecto_eta_cuadrado": 0.02867411859332428,
+    "analisis_posthoc": {
+      "metodo": "Mann-Whitney con corrección de Bonferroni",
+      "comparaciones": [
+        {
+          "grupo1": "Barranquilla",
+          "grupo2": "Manizales",
+          "p_valor": 0.7123477777933735,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Barranquilla",
+          "grupo2": "San Diego",
+          "p_valor": 0.20424482739332506,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Barranquilla",
+          "grupo2": "Coltejer Principal",
+          "p_valor": 0.284744376539391,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Barranquilla",
+          "grupo2": "Unicentro",
+          "p_valor": 0.5753671943924196,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Barranquilla",
+          "grupo2": "Bogota Plaza Imperial",
+          "p_valor": 0.1152752097014003,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Barranquilla",
+          "grupo2": "Bogota El Nogal",
+          "p_valor": 0.028964797960310158,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Barranquilla",
+          "grupo2": "Cali Norte",
+          "p_valor": 0.8085169314529603,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Barranquilla",
+          "grupo2": "Bogota Centro Mayor",
+          "p_valor": 0.09165651755413677,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Barranquilla",
+          "grupo2": "Bogota Santa Fe",
+          "p_valor": 0.8961628020150504,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Barranquilla",
+          "grupo2": "Bogota Gran Estacion",
+          "p_valor": 0.16146367689862984,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Barranquilla",
+          "grupo2": "Bucaramanga",
+          "p_valor": 0.7810930985012532,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Barranquilla",
+          "grupo2": "Bogota Principal",
+          "p_valor": 0.07801722619153571,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Barranquilla",
+          "grupo2": "Pereira",
+          "p_valor": 0.391999225388982,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Barranquilla",
+          "grupo2": "Bogota Centro Internacional",
+          "p_valor": 0.14859352958225513,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Manizales",
+          "grupo2": "San Diego",
+          "p_valor": 0.15153696428344526,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Manizales",
+          "grupo2": "Coltejer Principal",
+          "p_valor": 0.2374164836963304,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Manizales",
+          "grupo2": "Unicentro",
+          "p_valor": 0.7507741622669226,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Manizales",
+          "grupo2": "Bogota Plaza Imperial",
+          "p_valor": 0.046183018045094,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Manizales",
+          "grupo2": "Bogota El Nogal",
+          "p_valor": 0.0010081117749206245,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Manizales",
+          "grupo2": "Cali Norte",
+          "p_valor": 0.4455993478750985,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Manizales",
+          "grupo2": "Bogota Centro Mayor",
+          "p_valor": 0.03465478556055732,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Manizales",
+          "grupo2": "Bogota Santa Fe",
+          "p_valor": 0.7429093583776317,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Manizales",
+          "grupo2": "Bogota Gran Estacion",
+          "p_valor": 0.09781001030834108,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Manizales",
+          "grupo2": "Bucaramanga",
+          "p_valor": 0.34705816991156757,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Manizales",
+          "grupo2": "Bogota Principal",
+          "p_valor": 0.024696874121158195,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Manizales",
+          "grupo2": "Pereira",
+          "p_valor": 0.17058133697436373,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Manizales",
+          "grupo2": "Bogota Centro Internacional",
+          "p_valor": 0.09608938114544695,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "San Diego",
+          "grupo2": "Coltejer Principal",
+          "p_valor": 0.6166027187070735,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "San Diego",
+          "grupo2": "Unicentro",
+          "p_valor": 0.2266693544801004,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "San Diego",
+          "grupo2": "Bogota Plaza Imperial",
+          "p_valor": 0.6974407046242337,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "San Diego",
+          "grupo2": "Bogota El Nogal",
+          "p_valor": 0.11019832377671986,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "San Diego",
+          "grupo2": "Cali Norte",
+          "p_valor": 0.07588151189634916,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "San Diego",
+          "grupo2": "Bogota Centro Mayor",
+          "p_valor": 0.6209954277526524,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "San Diego",
+          "grupo2": "Bogota Santa Fe",
+          "p_valor": 0.10532751703827845,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "San Diego",
+          "grupo2": "Bogota Gran Estacion",
+          "p_valor": 0.8311539514514951,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "San Diego",
+          "grupo2": "Bucaramanga",
+          "p_valor": 0.0364528979606187,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "San Diego",
+          "grupo2": "Bogota Principal",
+          "p_valor": 0.5043292305628281,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "San Diego",
+          "grupo2": "Pereira",
+          "p_valor": 0.032091855757122104,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "San Diego",
+          "grupo2": "Bogota Centro Internacional",
+          "p_valor": 0.7667591130672953,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Coltejer Principal",
+          "grupo2": "Unicentro",
+          "p_valor": 0.35530873247737216,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Coltejer Principal",
+          "grupo2": "Bogota Plaza Imperial",
+          "p_valor": 0.3007176704826532,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Coltejer Principal",
+          "grupo2": "Bogota El Nogal",
+          "p_valor": 0.009371813150386503,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Coltejer Principal",
+          "grupo2": "Cali Norte",
+          "p_valor": 0.11366025823274489,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Coltejer Principal",
+          "grupo2": "Bogota Centro Mayor",
+          "p_valor": 0.2446622951115276,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Coltejer Principal",
+          "grupo2": "Bogota Santa Fe",
+          "p_valor": 0.16386439873605962,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Coltejer Principal",
+          "grupo2": "Bogota Gran Estacion",
+          "p_valor": 0.44762898107807625,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Coltejer Principal",
+          "grupo2": "Bucaramanga",
+          "p_valor": 0.047306428878257756,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Coltejer Principal",
+          "grupo2": "Bogota Principal",
+          "p_valor": 0.1813429795531214,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Coltejer Principal",
+          "grupo2": "Pereira",
+          "p_valor": 0.04351099247958902,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Coltejer Principal",
+          "grupo2": "Bogota Centro Internacional",
+          "p_valor": 0.4179642261521126,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Unicentro",
+          "grupo2": "Bogota Plaza Imperial",
+          "p_valor": 0.06947200698342396,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Unicentro",
+          "grupo2": "Bogota El Nogal",
+          "p_valor": 0.0009555333014710245,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Unicentro",
+          "grupo2": "Cali Norte",
+          "p_valor": 0.32877633015910346,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Unicentro",
+          "grupo2": "Bogota Centro Mayor",
+          "p_valor": 0.054116140414613316,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Unicentro",
+          "grupo2": "Bogota Santa Fe",
+          "p_valor": 0.5279373410157726,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Unicentro",
+          "grupo2": "Bogota Gran Estacion",
+          "p_valor": 0.15098055636527322,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Unicentro",
+          "grupo2": "Bucaramanga",
+          "p_valor": 0.225344705890273,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Unicentro",
+          "grupo2": "Bogota Principal",
+          "p_valor": 0.036510808503903015,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Unicentro",
+          "grupo2": "Pereira",
+          "p_valor": 0.12599905885231316,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Unicentro",
+          "grupo2": "Bogota Centro Internacional",
+          "p_valor": 0.14374790796744064,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Bogota Plaza Imperial",
+          "grupo2": "Bogota El Nogal",
+          "p_valor": 0.18017079282707216,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Bogota Plaza Imperial",
+          "grupo2": "Cali Norte",
+          "p_valor": 0.033632594037770774,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Bogota Plaza Imperial",
+          "grupo2": "Bogota Centro Mayor",
+          "p_valor": 0.9005715894823897,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Bogota Plaza Imperial",
+          "grupo2": "Bogota Santa Fe",
+          "p_valor": 0.03479337915378536,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Bogota Plaza Imperial",
+          "grupo2": "Bogota Gran Estacion",
+          "p_valor": 0.8811392065737212,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Bogota Plaza Imperial",
+          "grupo2": "Bucaramanga",
+          "p_valor": 0.009515049114460826,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Bogota Plaza Imperial",
+          "grupo2": "Bogota Principal",
+          "p_valor": 0.7548586284186549,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Bogota Plaza Imperial",
+          "grupo2": "Pereira",
+          "p_valor": 0.014926464567462144,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Bogota Plaza Imperial",
+          "grupo2": "Bogota Centro Internacional",
+          "p_valor": 0.9703492345637368,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Bogota El Nogal",
+          "grupo2": "Cali Norte",
+          "p_valor": 0.005601691505896648,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Bogota El Nogal",
+          "grupo2": "Bogota Centro Mayor",
+          "p_valor": 0.2300032761115126,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Bogota El Nogal",
+          "grupo2": "Bogota Santa Fe",
+          "p_valor": 0.0013968494558633715,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Bogota El Nogal",
+          "grupo2": "Bogota Gran Estacion",
+          "p_valor": 0.1631480898870057,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Bogota El Nogal",
+          "grupo2": "Bucaramanga",
+          "p_valor": 0.0005494767025604161,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Bogota El Nogal",
+          "grupo2": "Bogota Principal",
+          "p_valor": 0.35154005232764407,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Bogota El Nogal",
+          "grupo2": "Pereira",
+          "p_valor": 0.00351526887560663,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Bogota El Nogal",
+          "grupo2": "Bogota Centro Internacional",
+          "p_valor": 0.2557839449856869,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Cali Norte",
+          "grupo2": "Bogota Centro Mayor",
+          "p_valor": 0.02333636785122083,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Cali Norte",
+          "grupo2": "Bogota Santa Fe",
+          "p_valor": 0.6219432610544633,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Cali Norte",
+          "grupo2": "Bogota Gran Estacion",
+          "p_valor": 0.05294109772564692,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Cali Norte",
+          "grupo2": "Bucaramanga",
+          "p_valor": 0.959749071280272,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Cali Norte",
+          "grupo2": "Bogota Principal",
+          "p_valor": 0.020733168245491842,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Cali Norte",
+          "grupo2": "Pereira",
+          "p_valor": 0.4649239020741285,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Cali Norte",
+          "grupo2": "Bogota Centro Internacional",
+          "p_valor": 0.05121699543397172,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Bogota Centro Mayor",
+          "grupo2": "Bogota Santa Fe",
+          "p_valor": 0.02582221151333728,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Bogota Centro Mayor",
+          "grupo2": "Bogota Gran Estacion",
+          "p_valor": 0.8084368203845131,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Bogota Centro Mayor",
+          "grupo2": "Bucaramanga",
+          "p_valor": 0.006247269700755581,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Bogota Centro Mayor",
+          "grupo2": "Bogota Principal",
+          "p_valor": 0.8585393582046397,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Bogota Centro Mayor",
+          "grupo2": "Pereira",
+          "p_valor": 0.010003193530730252,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Bogota Centro Mayor",
+          "grupo2": "Bogota Centro Internacional",
+          "p_valor": 0.8888218238220937,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Bogota Santa Fe",
+          "grupo2": "Bogota Gran Estacion",
+          "p_valor": 0.06875768159715803,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Bogota Santa Fe",
+          "grupo2": "Bucaramanga",
+          "p_valor": 0.5565316992069769,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Bogota Santa Fe",
+          "grupo2": "Bogota Principal",
+          "p_valor": 0.019175752562112708,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Bogota Santa Fe",
+          "grupo2": "Pereira",
+          "p_valor": 0.24475130878187681,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Bogota Santa Fe",
+          "grupo2": "Bogota Centro Internacional",
+          "p_valor": 0.0678821567232928,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Bogota Gran Estacion",
+          "grupo2": "Bucaramanga",
+          "p_valor": 0.023739121666759178,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Bogota Gran Estacion",
+          "grupo2": "Bogota Principal",
+          "p_valor": 0.6661011469017795,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Bogota Gran Estacion",
+          "grupo2": "Pereira",
+          "p_valor": 0.023723622774131307,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Bogota Gran Estacion",
+          "grupo2": "Bogota Centro Internacional",
+          "p_valor": 0.9303094546344075,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Bucaramanga",
+          "grupo2": "Bogota Principal",
+          "p_valor": 0.004965239684265384,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Bucaramanga",
+          "grupo2": "Pereira",
+          "p_valor": 0.45188097503148794,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Bucaramanga",
+          "grupo2": "Bogota Centro Internacional",
+          "p_valor": 0.022825270037811162,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Bogota Principal",
+          "grupo2": "Pereira",
+          "p_valor": 0.0093899426163245,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        },
+        {
+          "grupo1": "Bogota Principal",
+          "grupo2": "Bogota Centro Internacional",
+          "p_valor": 0.7623238063314508,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto insignificante"
+        },
+        {
+          "grupo1": "Pereira",
+          "grupo2": "Bogota Centro Internacional",
+          "p_valor": 0.023254476515790174,
+          "diferencia_medias": 0.0,
+          "significativa": false,
+          "interpretacion_d": "",
+          "interpretacion_r": "efecto pequeño"
+        }
+      ]
+    }
+  }
+}

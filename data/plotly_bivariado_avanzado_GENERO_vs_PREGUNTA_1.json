@@ -1,0 +1,88 @@
+{
+  "datos_categorias": [
+    {
+      "categoria": "F",
+      "media": 4.4455611390284755,
+      "mediana": 5.0,
+      "q1": 4.0,
+      "q3": 5.0,
+      "min": 1.0,
+      "max": 5.0,
+      "n": 597,
+      "ic_inf": 4.373465961744565,
+      "ic_sup": 4.517656316312386,
+      "error_std": 0.03670923098764376
+    },
+    {
+      "categoria": "M",
+      "media": 4.358974358974359,
+      "mediana": 5.0,
+      "q1": 4.0,
+      "q3": 5.0,
+      "min": 1.0,
+      "max": 5.0,
+      "n": 429,
+      "ic_inf": 4.271614499374247,
+      "ic_sup": 4.44633421857447,
+      "error_std": 0.04444613415161304
+    },
+    {
+      "categoria": "No aplica",
+      "media": 3.8378378378378377,
+      "mediana": 4.0,
+      "q1": 3.0,
+      "q3": 5.0,
+      "min": 1.0,
+      "max": 5.0,
+      "n": 37,
+      "ic_inf": 3.418198364190015,
+      "ic_sup": 4.25747731148566,
+      "error_std": 0.20691322662803338
+    }
+  ],
+  "estadisticas": {
+    "prueba_utilizada": "Kruskal-Wallis H (no paramétrica)",
+    "p_valor": 0.0004895808000226334,
+    "diferencia_significativa": true,
+    "tamaño_efecto": {
+      "tamaño_efecto_eta_cuadrado": 0.01249426611919841,
+      "interpretacion_efecto": "efecto pequeño"
+    },
+    "potencia": null
+  },
+  "significancia_entre_grupos": [
+    {
+      "grupo1": "M",
+      "grupo2": "No aplica",
+      "p_valor": 0.0042448861487277886,
+      "diferencia": 0,
+      "efecto": "efecto pequeño"
+    },
+    {
+      "grupo1": "F",
+      "grupo2": "No aplica",
+      "p_valor": 0.0002644049234176481,
+      "diferencia": 0,
+      "efecto": "efecto pequeño"
+    }
+  ],
+  "layout_barras": {
+    "title": "Medias de PREGUNTA_1 por GENERO con IC 95%",
+    "xaxis": {
+      "title": "GENERO"
+    },
+    "yaxis": {
+      "title": "PREGUNTA_1"
+    },
+    "showlegend": true
+  },
+  "layout_boxplot": {
+    "title": "Distribución de PREGUNTA_1 por GENERO",
+    "xaxis": {
+      "title": "GENERO"
+    },
+    "yaxis": {
+      "title": "PREGUNTA_1"
+    }
+  }
+}

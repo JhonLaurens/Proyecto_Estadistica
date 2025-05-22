@@ -1081,17 +1081,17 @@ def bivariado_cat_cat(df, var1, var2, top_n=5, export_excel_path=None, export_pd
               # Guardar resultados estadísticos en un archivo separado
         with open(os.path.join(export_json_dir, f"estadisticas_{var1}_vs_{var2}.json"), 'w', encoding='utf-8') as f:
             stats_data = {
-                "prueba_independencia": {
+                 "prueba_independencia": {
                     "prueba_usada": resultados_chi2.get('prueba_usada', 'Chi-cuadrado'),
                     "p_valor": resultados_chi2['p_valor'],
                     "interpretacion": resultados_chi2['interpretacion'],
-                    "requisito_frecuencias_cumplido": resultados_chi2['requisito_frecuencias_cumplido']
-                },
-                "tamaño_efecto": {
-                    "v_cramer": resultados_chi2['v_cramer'],
-                    "interpretacion": resultados_chi2['interpretacion_efecto']
-                },
-                "resumen_categorias": [
+                    "requisito_frecuencias_cumplido": bool(resultados_chi2['requisito_frecuencias_cumplido'])
+                 },
+                 "tamaño_efecto": {
+                     "v_cramer": resultados_chi2['v_cramer'],
+                     "interpretacion": resultados_chi2['interpretacion_efecto']
+                 },
+                 "resumen_categorias": [
                     {
                         "categoria": str(idx),
                         "valor_mas_frecuente": str(cross_tab_pct.loc[idx].idxmax()),
@@ -1388,33 +1388,36 @@ def bivariado_cat_num(df, var_cat, var_num, top_n=5, export_excel_path=None, exp
         # Exportar resultados estadísticos detallados en un archivo separado
         resultados_estadisticos = {
             "normalidad_global": {
-                "es_normal": normalidad_global["es_normal"],
-                "estadistico": normalidad_global.get("estadistico", None),
-                "p_valor": normalidad_global.get("p_valor", None),
+                "es_normal": bool(normalidad_global["es_normal"]),
+                "estadistico": normalidad_global.get("estadistico"),
+                "p_valor": normalidad_global.get("p_valor"),
                 "interpretacion": normalidad_global["interpretacion"]
             },
             "normalidad_por_grupos": {
-                grupo: {
-                    "n": info.get("n", 0),
-                    "es_normal": info.get("es_normal", False),
-                    "estadistico": info.get("estadistico", None),
-                    "p_valor": info.get("p_valor", None),
-                    "interpretacion": info.get("interpretacion", "No evaluado")
-                } for grupo, info in normalidad_por_grupos["resultados_por_grupo"].items()
+                "resultados_por_grupo": [
+                    {
+                        "grupo": grupo,
+                        "es_normal": bool(info.get("es_normal", False)),
+                        "estadistico": info.get("estadistico"),
+                        "p_valor": info.get("p_valor"),
+                        "interpretacion": info.get("interpretacion", "No evaluado")
+                    }
+                    for grupo, info in normalidad_por_grupos["resultados_por_grupo"].items()
+                ]
             },
             "homogeneidad_varianzas": {
-                "test_realizado": resultados_diff.get('homogeneidad_varianza', {}).get('test_realizado', False),
-                "varianzas_homogeneas": resultados_diff.get('homogeneidad_varianza', {}).get('varianzas_homogeneas', False),
-                "estadistico": resultados_diff.get('homogeneidad_varianza', {}).get('estadistico', None),
-                "p_valor": resultados_diff.get('homogeneidad_varianza', {}).get('p_valor', None),
-                "interpretacion": resultados_diff.get('homogeneidad_varianza', {}).get('interpretacion', "No evaluado")
+                "test_realizado": bool(resultados_diff.get("homogeneidad_varianza", {}).get("test_realizado", False)),
+                "varianzas_homogeneas": bool(resultados_diff.get("homogeneidad_varianza", {}).get("varianzas_homogeneas", False)),
+                "estadistico": resultados_diff.get("homogeneidad_varianza", {}).get("estadistico"),
+                "p_valor": resultados_diff.get("homogeneidad_varianza", {}).get("p_valor"),
+                "interpretacion": resultados_diff.get("homogeneidad_varianza", {}).get("interpretacion", "No evaluado")
             },
             "prueba_diferencia": {
                 "nombre_prueba": resultados_diff["prueba"],
-                "p_valor": resultados_diff["p_valor"],
-                "diferencia_significativa": resultados_diff["diferencia_significativa"],
+                "p_valor": float(resultados_diff["p_valor"]),
+                "diferencia_significativa": bool(resultados_diff["diferencia_significativa"]),
                 "interpretacion": resultados_diff["interpretacion"],
-                "tamaño_efecto": resultados_diff["interpretacion_efecto"]
+                "tamaño_efecto": resultados_diff.get("interpretacion_efecto")
             }
         }
         
@@ -1434,13 +1437,26 @@ def bivariado_cat_num(df, var_cat, var_num, top_n=5, export_excel_path=None, exp
             
         # Añadir resultados post-hoc si están disponibles
         if resultados_diff.get('posthoc') and 'comparaciones' in resultados_diff['posthoc']:
-            resultados_estadisticos["prueba_diferencia"]["analisis_posthoc"] = {
-                "metodo": resultados_diff['posthoc']['metodo'],
-                "comparaciones": resultados_diff['posthoc']['comparaciones']
+            # Limpiar comparaciones para serialización JSON
+            comparaciones = resultados_diff['posthoc']['comparaciones']
+            clean_comps = []
+            for comp in comparaciones:
+                clean_comps.append({
+                    'grupo1': comp.get('grupo1', ''),
+                    'grupo2': comp.get('grupo2', ''),
+                    'p_valor': float(comp.get('p_valor', 1.0)),
+                    'diferencia_medias': float(comp.get('diferencia_medias', 0.0)),
+                    'significativa': bool(comp.get('significativa', False)),
+                    'interpretacion_d': comp.get('interpretacion_d', ''),
+                    'interpretacion_r': comp.get('interpretacion_r', '')
+                })
+            resultados_estadisticos['prueba_diferencia']['analisis_posthoc'] = {
+                'metodo': resultados_diff['posthoc']['metodo'],
+                'comparaciones': clean_comps
             }
           # Guardar resultados estadísticos como JSON
         with open(os.path.join(export_json_dir, f"estadisticas_{var_cat}_vs_{var_num}.json"), 'w', encoding='utf-8') as f:
-            json.dump(resultados_estadisticos, f, ensure_ascii=False, indent=2)
+            json.dump(resultados_estadisticos, f, ensure_ascii=False, indent=2, default=lambda o: o.item() if hasattr(o, 'item') else (bool(o) if hasattr(o, '__bool__') else str(o)))
             
         # Generar JSON con datos para gráficos interactivos con confianza estadística
         with open(os.path.join(export_json_dir, f"plotly_bivariado_avanzado_{var_cat}_vs_{var_num}.json"), 'w', encoding='utf-8') as f:
@@ -1479,8 +1495,8 @@ def bivariado_cat_num(df, var_cat, var_num, top_n=5, export_excel_path=None, exp
                 "datos_categorias": datos_con_intervalos,
                 "estadisticas": {
                     "prueba_utilizada": resultados_diff["prueba"],
-                    "p_valor": resultados_diff["p_valor"],
-                    "diferencia_significativa": resultados_diff["diferencia_significativa"],
+                    "p_valor": float(resultados_diff["p_valor"]),
+                    "diferencia_significativa": bool(resultados_diff["diferencia_significativa"]),
                     "tamaño_efecto": {k: v for k, v in resultados_diff.items() if "tamaño" in k or "efecto" in k},
                     "potencia": resultados_diff.get("analisis_potencia", {}).get("potencia", None)
                 },

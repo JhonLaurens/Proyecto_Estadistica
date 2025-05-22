@@ -1,0 +1,92 @@
+{
+  "prueba_independencia": {
+    "prueba_usada": "Chi-cuadrado (con advertencia)",
+    "p_valor": 4.921839070439185e-25,
+    "interpretacion": "Las variables están relacionadas (p=0.0000)",
+    "requisito_frecuencias_cumplido": false,
+    "estadistico": 150.82224550013368,
+    "grados_libertad": 14,
+    "advertencia": "Algunas frecuencias esperadas son menores a 5. Los resultados deben interpretarse con precaución."
+  },
+  "tamaño_efecto": {
+    "v_cramer": 0.37667436860303677,
+    "interpretacion": "Tamaño del efecto: V de Cramer = 0.377, efecto moderado"
+  },
+  "resumen_categorias": [
+    {
+      "categoria": "Barranquilla",
+      "valor_mas_frecuente": "Personas",
+      "porcentaje": 100.0
+    },
+    {
+      "categoria": "Bogota Centro Internacional",
+      "valor_mas_frecuente": "Personas",
+      "porcentaje": 84.78260869565217
+    },
+    {
+      "categoria": "Bogota Centro Mayor",
+      "valor_mas_frecuente": "Personas",
+      "porcentaje": 100.0
+    },
+    {
+      "categoria": "Bogota El Nogal",
+      "valor_mas_frecuente": "Personas",
+      "porcentaje": 100.0
+    },
+    {
+      "categoria": "Bogota Gran Estacion",
+      "valor_mas_frecuente": "Personas",
+      "porcentaje": 100.0
+    },
+    {
+      "categoria": "Bogota Plaza Imperial",
+      "valor_mas_frecuente": "Personas",
+      "porcentaje": 100.0
+    },
+    {
+      "categoria": "Bogota Principal",
+      "valor_mas_frecuente": "Personas",
+      "porcentaje": 76.71232876712328
+    },
+    {
+      "categoria": "Bogota Santa Fe",
+      "valor_mas_frecuente": "Personas",
+      "porcentaje": 100.0
+    },
+    {
+      "categoria": "Bucaramanga",
+      "valor_mas_frecuente": "Personas",
+      "porcentaje": 100.0
+    },
+    {
+      "categoria": "Cali Norte",
+      "valor_mas_frecuente": "Personas",
+      "porcentaje": 100.0
+    },
+    {
+      "categoria": "Coltejer Principal",
+      "valor_mas_frecuente": "Personas",
+      "porcentaje": 89.76377952755905
+    },
+    {
+      "categoria": "Manizales",
+      "valor_mas_frecuente": "Personas",
+      "porcentaje": 100.0
+    },
+    {
+      "categoria": "Pereira",
+      "valor_mas_frecuente": "Personas",
+      "porcentaje": 100.0
+    },
+    {
+      "categoria": "San Diego",
+      "valor_mas_frecuente": "Personas",
+      "porcentaje": 100.0
+    },
+    {
+      "categoria": "Unicentro",
+      "valor_mas_frecuente": "Personas",
+      "porcentaje": 100.0
+    }
+  ]
+}

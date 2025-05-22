@@ -1,0 +1,32 @@
+{
+  "prueba_independencia": {
+    "prueba_usada": "Chi-cuadrado (con advertencia)",
+    "p_valor": 1.487588692134599e-231,
+    "interpretacion": "Las variables están relacionadas (p=0.0000)",
+    "requisito_frecuencias_cumplido": false,
+    "estadistico": 1063.0,
+    "grados_libertad": 2,
+    "advertencia": "Algunas frecuencias esperadas son menores a 5. Los resultados deben interpretarse con precaución."
+  },
+  "tamaño_efecto": {
+    "v_cramer": 1.0,
+    "interpretacion": "Tamaño del efecto: V de Cramer = 1.000, efecto grande"
+  },
+  "resumen_categorias": [
+    {
+      "categoria": "F",
+      "valor_mas_frecuente": "GERENTE DE AGENCIA",
+      "porcentaje": 100.0
+    },
+    {
+      "categoria": "M",
+      "valor_mas_frecuente": "GERENTE DE AGENCIA",
+      "porcentaje": 100.0
+    },
+    {
+      "categoria": "No aplica",
+      "valor_mas_frecuente": "GERENTE DE CUENTA EMPRESAS",
+      "porcentaje": 100.0
+    }
+  ]
+}

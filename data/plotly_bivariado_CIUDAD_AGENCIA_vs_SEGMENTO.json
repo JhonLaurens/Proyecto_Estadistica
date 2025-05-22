@@ -1,5 +1,5 @@
 {
-  "data": [
+  "data_grouped": [
     {
       "x": [
         "Barranquilla",
@@ -45,14 +45,112 @@
       "name": "Personas"
     }
   ],
-  "layout": {
-    "title": "Distribución de SEGMENTO por CIUDAD_AGENCIA",
+  "data_stacked": [
+    {
+      "x": [
+        "Barranquilla",
+        "Bogota D.C.",
+        "Bucaramanga",
+        "Cali Norte",
+        "Manizales",
+        "Medellin",
+        "Pereira"
+      ],
+      "y": [
+        0.0,
+        4.3557168784029034,
+        0.0,
+        0.0,
+        0.0,
+        4.276315789473684,
+        0.0
+      ],
+      "type": "bar",
+      "name": "Empresas"
+    },
+    {
+      "x": [
+        "Barranquilla",
+        "Bogota D.C.",
+        "Bucaramanga",
+        "Cali Norte",
+        "Manizales",
+        "Medellin",
+        "Pereira"
+      ],
+      "y": [
+        100.0,
+        95.6442831215971,
+        100.0,
+        100.0,
+        100.0,
+        95.72368421052632,
+        100.0
+      ],
+      "type": "bar",
+      "name": "Personas"
+    }
+  ],
+  "layout_grouped": {
+    "title": {
+      "text": "Distribución de SEGMENTO por CIUDAD_AGENCIA",
+      "font": {
+        "size": 18
+      }
+    },
     "xaxis": {
       "title": "CIUDAD_AGENCIA"
     },
     "yaxis": {
       "title": "Porcentaje (%)"
     },
-    "barmode": "group"
+    "barmode": "group",
+    "annotations": [
+      {
+        "text": "Prueba: Chi-cuadrado (con advertencia)<br>p = 0.1559",
+        "showarrow": false,
+        "xref": "paper",
+        "yref": "paper",
+        "x": 0,
+        "y": 1,
+        "xanchor": "left",
+        "yanchor": "top",
+        "bgcolor": "rgba(255, 255, 255, 0.8)",
+        "bordercolor": "rgba(0, 0, 0, 0.2)",
+        "borderwidth": 1,
+        "borderpad": 4
+      }
+    ]
+  },
+  "layout_stacked": {
+    "title": {
+      "text": "Composición proporcional de SEGMENTO por CIUDAD_AGENCIA",
+      "font": {
+        "size": 18
+      }
+    },
+    "xaxis": {
+      "title": "CIUDAD_AGENCIA"
+    },
+    "yaxis": {
+      "title": "Porcentaje (%)"
+    },
+    "barmode": "stack",
+    "annotations": [
+      {
+        "text": "V de Cramer = 0.094<br>(V de Cramer = 0.094, efecto muy pequeño)",
+        "showarrow": false,
+        "xref": "paper",
+        "yref": "paper",
+        "x": 0,
+        "y": 1,
+        "xanchor": "left",
+        "yanchor": "top",
+        "bgcolor": "rgba(255, 255, 255, 0.8)",
+        "bordercolor": "rgba(0, 0, 0, 0.2)",
+        "borderwidth": 1,
+        "borderpad": 4
+      }
+    ]
   }
 }

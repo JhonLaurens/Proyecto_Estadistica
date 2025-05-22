@@ -1,0 +1,77 @@
+[2025-05-22 11:17:08] [INFO] Iniciando análisis de satisfacción Coltefinanciera
+[2025-05-22 11:17:08] [ÉXITO] Limpieza de archivos previos completada
+[2025-05-22 11:17:08] [INFO] FASE 1: CARGA Y LIMPIEZA DE DATOS
+[2025-05-22 11:17:08] [INFO] Cargando datos desde data/Base encuesta de satisfacción.csv
+[2025-05-22 11:17:08] [ÉXITO] Datos cargados exitosamente. 1063 registros encontrados
+[2025-05-22 11:17:08] [INFO] Limpiando y preparando datos
+[2025-05-22 11:17:08] [ÉXITO] Limpieza de datos completada. 1063 registros válidos después de limpieza
+[2025-05-22 11:17:08] [INFO] 
+FASE 2: ANÁLISIS UNIVARIADO
+[2025-05-22 11:17:08] [ADVERTENCIA] Advertencia: No se encontraron estas variables en los datos: EDAD
+[2025-05-22 11:17:08] [INFO] Realizando análisis univariado para 10 variables
+[2025-05-22 11:17:20] [ÉXITO] Análisis univariado completado
+[2025-05-22 11:17:20] [INFO] 
+FASE 3: ANÁLISIS BIVARIADO CATEGÓRICA-CATEGÓRICA
+[2025-05-22 11:17:20] [INFO] Realizando 8 análisis bivariados categórica-categórica
+[2025-05-22 11:17:22] [INFO] Análisis bivariado CIUDAD_AGENCIA vs TIPO_EJECUTIVO completado
+[2025-05-22 11:17:24] [INFO] Análisis bivariado CIUDAD_AGENCIA vs SEGMENTO completado
+[2025-05-22 11:17:25] [INFO] Análisis bivariado TIPO_EJECUTIVO vs SEGMENTO completado
+[2025-05-22 11:17:27] [INFO] Análisis bivariado GENERO vs CIUDAD_AGENCIA completado
+[2025-05-22 11:17:31] [INFO] Análisis bivariado GENERO vs SEGMENTO completado
+[2025-05-22 11:17:34] [INFO] Análisis bivariado ESTRATO vs SEGMENTO completado
+[2025-05-22 11:17:37] [INFO] Análisis bivariado GENERO vs TIPO_EJECUTIVO completado
+[2025-05-22 11:17:41] [INFO] Análisis bivariado AGENCIA_EJECUTIVO vs SEGMENTO completado
+[2025-05-22 11:17:41] [ÉXITO] Análisis bivariado categórica-categórica completado
+[2025-05-22 11:17:41] [INFO] 
+FASE 4: ANÁLISIS BIVARIADO CATEGÓRICA-NUMÉRICA
+[2025-05-22 11:17:41] [INFO] Realizando 6 análisis bivariados categórica-numérica
+[2025-05-22 11:17:57] [INFO] Análisis bivariado CIUDAD_AGENCIA vs PREGUNTA_1 completado
+[2025-05-22 11:18:44] [INFO] Análisis bivariado TIPO_EJECUTIVO vs PREGUNTA_1 completado
+[2025-05-22 11:19:45] [INFO] Análisis bivariado SEGMENTO vs PREGUNTA_1 completado
+[2025-05-22 11:20:17] [INFO] Análisis bivariado GENERO vs PREGUNTA_1 completado
+[2025-05-22 11:20:29] [INFO] Análisis bivariado ESTRATO vs PREGUNTA_1 completado
+[2025-05-22 11:20:40] [INFO] Análisis bivariado AGENCIA_EJECUTIVO vs PREGUNTA_1 completado
+[2025-05-22 11:20:40] [ÉXITO] Análisis bivariado categórica-numérica completado
+[2025-05-22 11:20:40] [INFO] 
+FASE 5: INFERENCIA ESTADÍSTICA
+[2025-05-22 11:20:40] [INFO] Realizando comparación estadística entre segmentos de clientes
+[2025-05-22 11:20:42] [ÉXITO] Análisis inferencial completado exitosamente
+[2025-05-22 11:20:42] [INFO] 
+FASE 6: ANÁLISIS DE TEXTO LIBRE
+[2025-05-22 11:20:42] [INFO] Realizando análisis de texto libre en comentarios
+[2025-05-22 11:20:46] [ÉXITO] Análisis de texto completado exitosamente
+[2025-05-22 11:20:46] [INFO] 
+FASE 7: GENERACIÓN DE DATOS PARA VISUALIZACIÓN INTERACTIVA
+[2025-05-22 11:20:47] [INFO] JSON de distribución de frecuencias generados
+[2025-05-22 11:20:47] [INFO] Generando archivo consolidado de estadísticas
+[2025-05-22 11:20:47] [ÉXITO] Archivo JSON consolidado generado exitosamente
+[2025-05-22 11:20:47] [INFO] 
+FASE 8: EXPORTACIÓN FINAL DE RESULTADOS
+[2025-05-22 11:20:47] [INFO] Exportando todas las figuras al PDF: graficos_analisis.pdf
+[2025-05-22 11:22:25] [ÉXITO] PDF generado exitosamente: graficos_analisis.pdf
+[2025-05-22 11:22:25] [INFO] 
+GENERANDO ARCHIVOS JSON PARA VISUALIZACIONES INTERACTIVAS
+[2025-05-22 11:22:25] [INFO] Iniciando generación de archivos JSON para Plotly
+[2025-05-22 11:22:33] [INFO] Generando 1 nubes de palabras interactivas
+[2025-05-22 11:22:33] [INFO] Nube de palabras generada para tabla_wordcloud_pregunta5.json
+[2025-05-22 11:22:33] [INFO] Procesando 1 archivos de inferencia estadística
+[2025-05-22 11:22:33] [INFO] Visualización de inferencia generada para inferencia_SEGMENTO_Personas_vs_Empresas.json
+[2025-05-22 11:22:33] [ÉXITO] Generación de archivos JSON para Plotly completada exitosamente
+[2025-05-22 11:22:33] [INFO] 
+INICIANDO SERVIDOR WEB Y ABRIENDO EL REPORTE EN EL NAVEGADOR
+[2025-05-22 11:22:33] [INFO] Ya hay un servidor web ejecutándose en el puerto 8000
+[2025-05-22 11:22:34] [INFO] Abriendo reporte web en: http://localhost:8000/reporte_web_coltefinanciera.html
+[2025-05-22 11:22:34] [ÉXITO] Reporte web abierto en el navegador
+[2025-05-22 11:22:34] [ÉXITO] Servidor dedicado iniciado con start_server.py
+[2025-05-22 11:22:34] [INFO] 
+================================================================================
+[2025-05-22 11:22:34] [ÉXITO] ANÁLISIS DE SATISFACCIÓN COMPLETADO EXITOSAMENTE
+[2025-05-22 11:22:34] [INFO] ================================================================================
+[2025-05-22 11:22:34] [INFO] Resultados generados:
+[2025-05-22 11:22:34] [INFO] 1. Archivo Excel: resultados_analisis.xlsx
+[2025-05-22 11:22:34] [INFO] 2. Archivo PDF: graficos_analisis.pdf
+[2025-05-22 11:22:34] [INFO] 3. Gráficos PNG: graficos/
+[2025-05-22 11:22:34] [INFO] 4. Datos JSON: data/
+[2025-05-22 11:22:34] [INFO] 5. Visualización web: http://localhost:8000/reporte_web_coltefinanciera.html
+[2025-05-22 11:22:34] [INFO] 6. Archivo de log: log_analisis.txt
+[2025-05-22 11:22:34] [INFO] ================================================================================

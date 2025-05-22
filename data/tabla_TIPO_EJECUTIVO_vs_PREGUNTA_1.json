@@ -30,5 +30,17 @@
   "Desviacion":{
     "GERENTE DE AGENCIA":0.91,
     "GERENTE DE CUENTA EMPRESAS":1.26
+  },
+  "Error_estandar":{
+    "GERENTE DE AGENCIA":0.03,
+    "GERENTE DE CUENTA EMPRESAS":0.21
+  },
+  "IC_95_inf":{
+    "GERENTE DE AGENCIA":4.35,
+    "GERENTE DE CUENTA EMPRESAS":3.42
+  },
+  "IC_95_sup":{
+    "GERENTE DE AGENCIA":4.46,
+    "GERENTE DE CUENTA EMPRESAS":4.26
   }
 }

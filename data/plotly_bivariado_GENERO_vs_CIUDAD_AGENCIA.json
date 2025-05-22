@@ -1,5 +1,5 @@
 {
-  "data": [
+  "data_grouped": [
     {
       "x": [
         "F",
@@ -99,14 +99,166 @@
       "name": "Pereira"
     }
   ],
-  "layout": {
-    "title": "Distribución de CIUDAD_AGENCIA por GENERO",
+  "data_stacked": [
+    {
+      "x": [
+        "F",
+        "M",
+        "No aplica"
+      ],
+      "y": [
+        2.3450586264656614,
+        1.8648018648018647,
+        0.0
+      ],
+      "type": "bar",
+      "name": "Barranquilla"
+    },
+    {
+      "x": [
+        "F",
+        "M",
+        "No aplica"
+      ],
+      "y": [
+        48.91122278056951,
+        54.77855477855478,
+        64.86486486486487
+      ],
+      "type": "bar",
+      "name": "Bogota D.C."
+    },
+    {
+      "x": [
+        "F",
+        "M",
+        "No aplica"
+      ],
+      "y": [
+        6.365159128978225,
+        4.428904428904429,
+        0.0
+      ],
+      "type": "bar",
+      "name": "Bucaramanga"
+    },
+    {
+      "x": [
+        "F",
+        "M",
+        "No aplica"
+      ],
+      "y": [
+        2.0100502512562812,
+        3.7296037296037294,
+        0.0
+      ],
+      "type": "bar",
+      "name": "Cali Norte"
+    },
+    {
+      "x": [
+        "F",
+        "M",
+        "No aplica"
+      ],
+      "y": [
+        8.040201005025125,
+        8.391608391608392,
+        0.0
+      ],
+      "type": "bar",
+      "name": "Manizales"
+    },
+    {
+      "x": [
+        "F",
+        "M",
+        "No aplica"
+      ],
+      "y": [
+        30.82077051926298,
+        24.941724941724942,
+        35.13513513513514
+      ],
+      "type": "bar",
+      "name": "Medellin"
+    },
+    {
+      "x": [
+        "F",
+        "M",
+        "No aplica"
+      ],
+      "y": [
+        1.507537688442211,
+        1.8648018648018647,
+        0.0
+      ],
+      "type": "bar",
+      "name": "Pereira"
+    }
+  ],
+  "layout_grouped": {
+    "title": {
+      "text": "Distribución de CIUDAD_AGENCIA por GENERO",
+      "font": {
+        "size": 18
+      }
+    },
     "xaxis": {
       "title": "GENERO"
     },
     "yaxis": {
       "title": "Porcentaje (%)"
     },
-    "barmode": "group"
+    "barmode": "group",
+    "annotations": [
+      {
+        "text": "Prueba: Chi-cuadrado (con advertencia)<br>p = 0.0869",
+        "showarrow": false,
+        "xref": "paper",
+        "yref": "paper",
+        "x": 0,
+        "y": 1,
+        "xanchor": "left",
+        "yanchor": "top",
+        "bgcolor": "rgba(255, 255, 255, 0.8)",
+        "bordercolor": "rgba(0, 0, 0, 0.2)",
+        "borderwidth": 1,
+        "borderpad": 4
+      }
+    ]
+  },
+  "layout_stacked": {
+    "title": {
+      "text": "Composición proporcional de CIUDAD_AGENCIA por GENERO",
+      "font": {
+        "size": 18
+      }
+    },
+    "xaxis": {
+      "title": "GENERO"
+    },
+    "yaxis": {
+      "title": "Porcentaje (%)"
+    },
+    "barmode": "stack",
+    "annotations": [
+      {
+        "text": "V de Cramer = 0.095<br>(V de Cramer = 0.095, efecto muy pequeño)",
+        "showarrow": false,
+        "xref": "paper",
+        "yref": "paper",
+        "x": 0,
+        "y": 1,
+        "xanchor": "left",
+        "yanchor": "top",
+        "bgcolor": "rgba(255, 255, 255, 0.8)",
+        "bordercolor": "rgba(0, 0, 0, 0.2)",
+        "borderwidth": 1,
+        "borderpad": 4
+      }
+    ]
   }
 }

@@ -30,5 +30,17 @@
   "Desviacion":{
     "Personas":0.91,
     "Empresas":1.26
+  },
+  "Error_estandar":{
+    "Personas":0.03,
+    "Empresas":0.21
+  },
+  "IC_95_inf":{
+    "Personas":4.35,
+    "Empresas":3.42
+  },
+  "IC_95_sup":{
+    "Personas":4.46,
+    "Empresas":4.26
   }
 }

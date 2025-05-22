@@ -5,12 +5,12 @@ import os
 
 def export_table_to_excel(df, sheet_name, excel_path):
     """Exporta un DataFrame a una hoja de Excel, reemplazando si ya existe."""
-    # Si el archivo existe, usa append y if_sheet_exists=replace; si no, crea nuevo
+    # Si el archivo existe, usa openpyxl en modo append; si no, crea nuevo con openpyxl
     if os.path.exists(excel_path):
-        with pd.ExcelWriter(excel_path, mode='a', if_sheet_exists='replace') as writer:
+        with pd.ExcelWriter(excel_path, engine='openpyxl', mode='a', if_sheet_exists='replace') as writer:
             df.to_excel(writer, sheet_name=sheet_name)
     else:
-        with pd.ExcelWriter(excel_path, mode='w') as writer:
+        with pd.ExcelWriter(excel_path, engine='openpyxl', mode='w') as writer:
             df.to_excel(writer, sheet_name=sheet_name)
 
 # NUEVO: Manejo de figuras para PDF

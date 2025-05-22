@@ -1,0 +1,20 @@
+{
+  "GERENTE DE AGENCIA":{
+    "Barranquilla":22,
+    "Bogota D.C.":527,
+    "Bucaramanga":57,
+    "Cali Norte":28,
+    "Manizales":84,
+    "Medellin":291,
+    "Pereira":17
+  },
+  "GERENTE DE CUENTA EMPRESAS":{
+    "Barranquilla":0,
+    "Bogota D.C.":24,
+    "Bucaramanga":0,
+    "Cali Norte":0,
+    "Manizales":0,
+    "Medellin":13,
+    "Pereira":0
+  }
+}

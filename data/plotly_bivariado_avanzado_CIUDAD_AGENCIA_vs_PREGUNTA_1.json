@@ -1,0 +1,133 @@
+{
+  "datos_categorias": [
+    {
+      "categoria": "Pereira",
+      "media": 4.882352941176471,
+      "mediana": 5.0,
+      "q1": 5.0,
+      "q3": 5.0,
+      "min": 4.0,
+      "max": 5.0,
+      "n": 17,
+      "ic_inf": 4.711600007035576,
+      "ic_sup": 5.053105875317366,
+      "error_std": 0.08054743492723031
+    },
+    {
+      "categoria": "Cali Norte",
+      "media": 4.642857142857143,
+      "mediana": 5.0,
+      "q1": 4.75,
+      "q3": 5.0,
+      "min": 1.0,
+      "max": 5.0,
+      "n": 28,
+      "ic_inf": 4.32250589347366,
+      "ic_sup": 4.9632083922406265,
+      "error_std": 0.15612948867385715
+    },
+    {
+      "categoria": "Barranquilla",
+      "media": 4.590909090909091,
+      "mediana": 5.0,
+      "q1": 4.25,
+      "q3": 5.0,
+      "min": 2.0,
+      "max": 5.0,
+      "n": 22,
+      "ic_inf": 4.2378200957202345,
+      "ic_sup": 4.943998086097947,
+      "error_std": 0.16978584561937995
+    },
+    {
+      "categoria": "Manizales",
+      "media": 4.5476190476190474,
+      "mediana": 5.0,
+      "q1": 4.0,
+      "q3": 5.0,
+      "min": 1.0,
+      "max": 5.0,
+      "n": 84,
+      "ic_inf": 4.374516508771767,
+      "ic_sup": 4.720721586466328,
+      "error_std": 0.08703169394005343
+    },
+    {
+      "categoria": "Bucaramanga",
+      "media": 4.526315789473684,
+      "mediana": 5.0,
+      "q1": 5.0,
+      "q3": 5.0,
+      "min": 1.0,
+      "max": 5.0,
+      "n": 57,
+      "ic_inf": 4.242193822371698,
+      "ic_sup": 4.81043775657567,
+      "error_std": 0.14183116608442017
+    },
+    {
+      "categoria": "Medellin",
+      "media": 4.457236842105263,
+      "mediana": 5.0,
+      "q1": 4.0,
+      "q3": 5.0,
+      "min": 1.0,
+      "max": 5.0,
+      "n": 304,
+      "ic_inf": 4.36295546168879,
+      "ic_sup": 4.551518222521736,
+      "error_std": 0.047911487883590884
+    },
+    {
+      "categoria": "Bogota D.C.",
+      "media": 4.277676950998185,
+      "mediana": 5.0,
+      "q1": 4.0,
+      "q3": 5.0,
+      "min": 1.0,
+      "max": 5.0,
+      "n": 551,
+      "ic_inf": 4.195336394914545,
+      "ic_sup": 4.360017507081825,
+      "error_std": 0.0419188106976587
+    }
+  ],
+  "estadisticas": {
+    "prueba_utilizada": "Kruskal-Wallis H (no paramétrica)",
+    "p_valor": 3.0510977891419696e-05,
+    "diferencia_significativa": true,
+    "tamaño_efecto": {
+      "tamaño_efecto_eta_cuadrado": 0.02327466152161988,
+      "interpretacion_efecto": "efecto pequeño"
+    },
+    "potencia": null
+  },
+  "significancia_entre_grupos": [
+    {
+      "grupo1": "Bogota D.C.",
+      "grupo2": "Bucaramanga",
+      "p_valor": 0.001877973294504138,
+      "diferencia": 0,
+      "efecto": "efecto pequeño"
+    }
+  ],
+  "layout_barras": {
+    "title": "Medias de PREGUNTA_1 por CIUDAD_AGENCIA con IC 95%",
+    "xaxis": {
+      "title": "CIUDAD_AGENCIA"
+    },
+    "yaxis": {
+      "title": "PREGUNTA_1"
+    },
+    "showlegend": true
+  },
+  "layout_boxplot": {
+    "title": "Distribución de PREGUNTA_1 por CIUDAD_AGENCIA",
+    "xaxis": {
+      "title": "CIUDAD_AGENCIA"
+    },
+    "yaxis": {
+      "title": "PREGUNTA_1"
+    }
+  }
+}
